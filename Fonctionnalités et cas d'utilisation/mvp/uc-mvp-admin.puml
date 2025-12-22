@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+actor "Auteur" as Author
+actor "Administrateur" as Admin
+
+Author <|-- Admin
+
+package "Back-Office (Admin)" {
+  ' --- 1. Espace Commun ---
+  usecase "Voir le Dashboard (Stats)" as UC_Dashboard
+
+  ' --- 2. Gestion Content ---
+  usecase "Gérer les Articles" as UC_CRUD
+  usecase "Soumettre pour validation" as UC_Submit
+  usecase "Valider & Publier" as UC_Publish
+
+  ' --- 3. Gestion Admin ---
+  usecase "Modérer les Commentaires" as UC_Moderate
+}
+
+' Relations Auteur
+Author -- UC_Dashboard
+Author -- UC_CRUD
+
+' Extensions Gérer Articles
+UC_Submit .> UC_CRUD : <<extend>>
+UC_Publish .> UC_CRUD : <<extend>>
+
+' Relations Admin
+Admin -- UC_Moderate
+@enduml
