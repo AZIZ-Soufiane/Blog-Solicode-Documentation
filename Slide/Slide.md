@@ -7,107 +7,168 @@ backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 style: |
   section {
-    font-size: 24px;
+    font-size: 22px;
+    color: #333;
+    line-height: 1.4;
+    padding: 2em;
   }
   h1, h2 {
-    color: #333;
+    color: #111;
+    margin-bottom: 0.5em;
+    font-weight: bold;
   }
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+    color: #222;
+    margin-bottom: 0.4em;
+  }
+  p, li, blockquote {
+    font-size: 1.1em;
+    margin-bottom: 0.8em;
+  }
+  ul, ol {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+  }
+  img {
+    max-width: 80%;
+    max-height: 60vh;
+    display: block;
+    margin: 1em auto;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #ddd;
+    padding-left: 1em;
+    margin: 1em 0;
+  }
+
 ---
 
 ![bg left:40% 80%](https://via.placeholder.com/300x200?text=Logo+Solicode)
+
 # **Projet Blog Solicode**
 ## Sprint 1
-Présentation réalisée avec Marp  
-Date : 22 décembre 2025  
-Équipe : [Votre Nom/Équipe]
+
+**Réalisé par :**  
+Anouar Benyakhlef  
+
+**Encadré par :**  
+M. Essarraj Fouad
 
 ---
 
-# Besoins
-Les besoins du projet "Blog Solicode" visent à créer une plateforme simple et accessible pour partager des connaissances en programmation au sein de la communauté Solicode.
+# Besoin
 
-- **Besoins fonctionnels** : Permettre aux utilisateurs de publier des articles, commenter et rechercher du contenu.
-- **Besoins non fonctionnels** : Site responsive, sécurisé (authentification basique), performant (chargement rapide).
-- **Contrainte** : Focus sur Sprint 1 pour les fonctionnalités de base, sans intégrations avancées comme les réseaux sociaux.
+Solicode a besoin de communiquer sur ses activités via un canal numérique centralisé et maîtrisé.  
+Les réseaux sociaux ne suffisent plus : besoin de référencement, de structuration et d’une identité propre.
 
-Exemples de besoins prioritaires :
-1. Un utilisateur doit pouvoir s'inscrire et se connecter.
-2. Publication d'articles avec titres, corps et tags.
-3. Affichage d'une liste d'articles récents.
+### La Solution  
+Une plateforme de blog dynamique, sécurisée et scalable, accompagnée d’une application mobile permettant de notifier les utilisateurs en temps réel.
+
+La plateforme se compose de 4 modules interconnectés.  
+Dans ce sprint, nous avons démarré et réalisé le **Module 1**.
 
 ---
 
-# Fonctionnalités (Use Cases du Sprint 1)
-Le Sprint 1 implémente les use cases essentiels pour un MVP (Minimum Viable Product).
+# Module 1 : Portail Web Public (Front-Office)
 
+Interface visible par les visiteurs permettant :
 
+- Page d’accueil
+- Navigation
+- Recherche avancée
+- Lecture d’articles immersive
+
+---
+
+# Fonctionnalités (Use Cases – Sprint 1)
+
+Le Sprint 1 implémente les fonctionnalités essentielles constituant le **MVP (Minimum Viable Product)**.
+
+![Use Case Public Visiteur](./images/public-visiteur-usecase.png)
 
 ---
 
 # Labs (Ateliers Pratiques Réalisés)
-Pour finaliser le projet, nous avons suivi plusieurs labs (ateliers ou sessions pratiques) couvrant les technologies clés. Ces labs ont été essentiels pour surmonter les défis techniques et itérer sur le code.
 
-- **Lab 1 : Initiation HTML/CSS/JS** (Durée : 4h)  
-  Construction de la structure de base du site, avec focus sur le responsive design via Bootstrap.
+Afin de mener à bien ce projet, plusieurs ateliers techniques ont été réalisés :
 
-- **Lab 2 : Backend avec Node.js/Express** (Durée : 6h)  
-  Mise en place du serveur, routes API pour les articles.
+- **Lab 1 : Vite**  
+  Mise en place de la structure du projet et configuration initiale, avec focus sur le responsive design via Bootstrap.
 
-- **Lab 3 : Base de Données MongoDB** (Durée : 5h)  
-  Modélisation et requêtes basiques, résolution d'erreurs de connexion.
+- **Lab 2 : Ajax**  
+  Mise en place du serveur et des routes API pour la gestion des articles.
 
-- **Lab 4 : Tests et Débogage** (Durée : 3h)  
-  Utilisation de Jest pour tester les use cases, correction de bugs (ex. : validation des formulaires).
+- **Lab 3 : Github**  
+  Gestion de versions, collaboration, résolution d’erreurs et synchronisation du code.
 
-Défis rencontrés : Intégration frontend-backend, résolus via des itérations en groupe. Ces labs ont permis d'achever le Sprint 1 en respectant les délais.
-
-Tableau des Labs :
-
-| Lab | Technologies | Objectifs Atteints | Défis |
-|-----|--------------|--------------------|-------|
-| 1 | HTML/CSS/JS | Interface basique | Compatibilité navigateurs |
-| 2 | Node.js | API REST | Gestion des erreurs |
-| 3 | MongoDB | Stockage données | Schéma optimisé |
-| 4 | Jest | Tests unitaires | Couverture 80% |
+- **Lab 4 : PHP Naming Conventions**   
+  Structuration du code, bonnes pratiques de nommage, tests unitaires et correction de bogues.
 
 ---
 
-# Maquette (Mockup Utilisé)
-La maquette définit l'interface utilisateur pour une expérience intuitive. Nous avons utilisé Figma pour le design initial.
+# Maquettes (Mockups)
 
-**Description Générale** :  
-- Page d'accueil : Liste d'articles en cards, barre de recherche.  
-- Page Article : Contenu détaillé, section commentaires.  
-- Dashboard : Boutons pour nouveau post, édition.
+Les maquettes définissent l’interface utilisateur afin d’assurer une expérience claire, moderne et intuitive.  
+Nous avons utilisé Tailwind + Preline UI pour le design initial.
 
-Représentation Visuelle :
+### Représentation Visuelle
 
+![Mockup 1](./images/home-page-capture.png)
 
 ---
 
-# Diagramme de Classe 
-Le diagramme de classe modélise la base de données. Il définit les entités principales et leurs relations.
+![Mockup 2](./images/search-page-capture.png)
 
-**Entités Clés** :  
-- User : id, email, password, role.  
-- Article : id, title, content, author (ref User), tags[], date.  
-- Comment : id, content, author (ref User), article (ref Article), date.
-
+---
+![Mockup 3](./images/article-page-capture.png)
 
 ---
 
-# Réalisation
-La réalisation du Sprint 1 a implémenté les fonctionnalités avec:
+# Diagramme de Classe
 
-* 
-* 
-* 
+Le diagramme de classe modélise la base de données et définit les entités principales ainsi que leurs relations.
 
+![Diagramme de Classe](./images/diagramme-classes.png)
 
-Résultats : Application fonctionnelle avec 3 use cases implémentés, tests passés à 85%. Améliorations futures : Authentification JWT pour Sprint 2.
+---
 
+# Réalisation Technique
+
+### Back-End & Architecture
+- Framework : **Laravel 12**
+- Architecture : **N-Tiers (Controller → Service → Model)**
+
+### Front-End (Web)
+- Moteur de template : **Blade (Components & Layouts)**
+- CSS : **Tailwind CSS**
+- UI Kit : **Preline UI**
 
 ---
 
 # Conclusion
-Ce Sprint 1 pose les fondations solides pour "Blog Solicode". Prochains sprints : Intégrations avancées et optimisations. Questions ?
+
+Le Sprint 1 a permis de poser des bases solides pour la plateforme **Blog Solicode** :
+- Structure claire  
+- Architecture scalable  
+- Expérience utilisateur bien définie  
+
+Les prochains sprints se concentreront sur :
+-  L'Administration (Back-Office) - Le centre de contrôle sécurisé pour les gestionnaires.
+- s API REST (Le Pont) - L'interface d'échange de données.
+- Application Mobile (Android) - L'extension native pour la fidélisation.  
+
+Merci pour votre attention.
+Questions ?
