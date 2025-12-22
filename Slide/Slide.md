@@ -23,7 +23,7 @@ Date : 22 décembre 2025
 
 ---
 
-# Travail à Faire (Besoins)
+# Besoins
 Les besoins du projet "Blog Solicode" visent à créer une plateforme simple et accessible pour partager des connaissances en programmation au sein de la communauté Solicode.
 
 - **Besoins fonctionnels** : Permettre aux utilisateurs de publier des articles, commenter et rechercher du contenu.
