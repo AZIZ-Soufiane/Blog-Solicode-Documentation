@@ -48,6 +48,8 @@ Ce dépôt contient principalement :
 
 # Structure du dépôt Blog-Solicode-Documentation
 
+
+```
 blog-solicode-documentation/
 ├── slides/                     # Documents et supports pour les présentations
 ├── besoin/                      # Documents relatifs aux besoins du projet (Travail à faire)
@@ -55,6 +57,4 @@ blog-solicode-documentation/
 ├── validation-des-maquettes/    # Retours et validations des maquettes avec utilisateurs
 ├── README.md                    # Fichier principal de documentation
 ├── liste-des-utilisateurs.md    # Liste des utilisateurs du projet
-
-
 
