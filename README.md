@@ -46,6 +46,12 @@ Ce dépôt contient principalement :
 
 ---
 
+## 📂 structure des dossiers
 
-
-
+blog-solicode-documentation/
+├── slides/
+├── besoin/
+├── validation-des-maquettes/
+├── README.md
+├── liste-des-utilisateurs.md
+└── stack.md
