@@ -1,0 +1,45 @@
+@startuml
+left to right direction
+actor "Visiteur" as Guest
+actor "Membre" as Member
+
+Guest <|-- Member
+
+package "Espace Membre & Interaction" {
+  ' Authentification
+  usecase "Se connecter (Email / Google / GitHub)" as UC_Login
+  usecase "S'inscrire" as UC_Register
+  usecase "Réinitialiser mot de passe" as UC_ResetPwd
+  
+  ' Interactions
+  usecase "Lire un article" as UC_Read
+  usecase "Ajouter aux favoris" as UC_AddFavorite
+  usecase "Poster un commentaire" as UC_PostComment
+  usecase "Lire les commentaires" as UC_ReadComments
+  usecase "Partager sur les réseaux" as UC_Share
+  
+  ' Profil
+  usecase "Voir son Profil" as UC_Profile
+}
+
+' Relations Auth (Accessible au visiteur)
+Guest -- UC_Login
+Guest -- UC_Register
+Guest -- UC_ResetPwd
+
+' Relations Membre
+Member -- UC_PostComment
+Member -- UC_AddFavorite
+Member -- UC_Profile
+
+' Extensions sur la lecture
+UC_AddFavorite .> UC_Read : <<extend>>
+UC_PostComment .> UC_Read : <<extend>>
+UC_ReadComments .> UC_Read : <<extend>>
+UC_Share .> UC_Read : <<extend>>
+
+' Inclusions Auth
+UC_PostComment ..> UC_Login : <<include>>
+UC_AddFavorite ..> UC_Login : <<include>>
+
+@enduml

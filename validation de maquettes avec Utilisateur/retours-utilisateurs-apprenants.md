@@ -8,7 +8,7 @@
 
 ## Page détail d’article
 
-* Estimation du temps de lecture
+* Un minuteur pour enregistrer le temps de lecture d’un article
 * Affichage des tags à la fin de l’article ainsi que de la catégorie
 * Mise en place de breadcrumbs afin d’améliorer la navigation et la compréhension du parcours utilisateur
 
@@ -40,6 +40,11 @@
 
 * Gestion du profil
 * Paramètres de notifications
+
+## Général
+
+* Mise en place d’un espace communauté pour partager les expériences et les échanges, similaire à Reddit
+
 
 ---
 

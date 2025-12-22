@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+actor "Administrateur" as Admin
+
+package "Administration Complète" {
+  usecase "Gérer les Catégories" as UC_Cats
+  usecase "Gérer les Tags" as UC_Tags
+  usecase "Gérer les Utilisateurs" as UC_Users
+  usecase "Attribuer un Rôle" as UC_Roles
+}
+
+Admin -- UC_Cats
+Admin -- UC_Tags
+Admin -- UC_Users
+
+UC_Roles .> UC_Users : <<extend>>
+@enduml
