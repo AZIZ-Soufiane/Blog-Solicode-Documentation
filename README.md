@@ -46,15 +46,6 @@ Ce dépôt contient principalement :
 
 ---
 
-## 📂 structure des dossiers
 
-blog-solicode-documentation/
-│
-├── slides/ # Dossier contenant les présentations du projet
-├── besoin/ # Dossier contenant les besoins et spécifications
-├── validation-des-maquettes/ # Dossier contenant les validations des maquettes avec les utilisateurs
-├── README.md # Fichier principal du dépôt
-├── liste-des-utilisateurs.md # Fichier listant les utilisateurs impliqués dans le projet
-└── stack.md # Fichier décrivant les stacks et technologies utilisées
 
 
