@@ -44,8 +44,17 @@ Ce dépôt contient principalement :
 -  **Stacks**  
   - Documents et références sur les technologies utilisées dans le projet (HTML, CSS, JS, PHP, Laravel, React…)
 
----
+----
+
+# Structure du dépôt Blog-Solicode-Documentation
 
 
-
+```
+blog-solicode-documentation/
+├── slides/                     # Documents et supports pour les présentations
+├── besoin/                      # Documents relatifs aux besoins du projet (Travail à faire)
+├── maquette/                    # Dossier de maquettes (Création de maquette)
+├── validation-des-maquettes/    # Retours et validations des maquettes avec utilisateurs
+├── README.md                    # Fichier principal de documentation
+├── liste-des-utilisateurs.md    # Liste des utilisateurs du projet
 
