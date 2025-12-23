@@ -1,5 +1,8 @@
 # Labs List
 
+## Important
+➡️ **Si un membre ne trouve pas de lab à réaliser, il devra obligatoirement travailler sur le Lab AJAX.**
+
 
 ### Lab 01 – AJAX
 **Who :** Soufian
