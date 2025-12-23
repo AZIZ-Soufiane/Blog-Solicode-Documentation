@@ -13,4 +13,5 @@
 ## Apprenants
 * Ayoub Faqihi --> Anouar Benyekhlef
 * Mohamed Yassir El Mesbahi --> Mohamed Ouallou
-* Safaa El gharras --> Abdelhay Mellouli
+* Safa El gharras --> Abdelhay Mellouli
+* Ismail Founti
