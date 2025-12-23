@@ -1,0 +1,44 @@
+@startuml UC_MVP_Admin
+left to right direction
+actor "Auteur" as Author
+actor "Administrateur" as Admin
+
+Author <|-- Admin
+
+package "Back-Office (Admin)" {
+  ' --- 1. Espace Commun ---
+  usecase "Voir le Dashboard (Stats)" as UC_Dashboard
+
+  ' --- 2. Gestion Content ---
+  usecase "Afficher les Articles" as UC_View
+  usecase "Ajouter un Article" as UC_Add
+  usecase "Modifier un Article" as UC_Edit
+  usecase "Supprimer un Article" as UC_Delete
+  usecase "Soumettre pour validation" as UC_Submit
+  usecase "Valider & Publier" as UC_Publish
+
+  ' --- 3. Gestion Admin ---
+  usecase "Modérer les Commentaires" as UC_Moderate
+}
+
+' Relations Auteur
+Author -- UC_Dashboard
+Author -- UC_View
+Author -- UC_Add
+Author -- UC_Edit
+Author -- UC_Delete
+
+' Extensions Gestion Articles
+UC_Submit .> UC_View : <<extend>>
+UC_Submit .> UC_Add : <<extend>>
+UC_Submit .> UC_Edit : <<extend>>
+UC_Submit .> UC_Delete : <<extend>>
+
+UC_Publish .> UC_View : <<extend>>
+UC_Publish .> UC_Add : <<extend>>
+UC_Publish .> UC_Edit : <<extend>>
+UC_Publish .> UC_Delete : <<extend>>
+
+' Relations Admin
+Admin -- UC_Moderate
+@enduml
