@@ -75,6 +75,6 @@ blog-solicode-documentation/
 - La Pull Request doit être validée avant le merge
 
 
-**Un lab explicatif de Github est disponible dans le dossier `labs/`**
+**Un lab explicatif de Github est disponible dans :** [Lab GitHub – Gestion des issues et merge](https://github.com/AZIZ-Soufiane/Blog-Solicode-Documentation/blob/main/Labs/lab%20Github.md)
 
 
