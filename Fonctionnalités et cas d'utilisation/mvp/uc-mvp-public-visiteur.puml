@@ -19,5 +19,4 @@ Guest -- UC_ACC
 UC_Search .> UC_List : <<extend>>
 UC_Filter .> UC_List : <<extend>>
 UC_Filter .> UC_Search : <<extend>>
-
 @enduml

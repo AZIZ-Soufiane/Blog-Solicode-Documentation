@@ -62,9 +62,13 @@ style: |
 ## Sprint 1
 
 **Réalisé par :**  
-Anouar Benyakhlef  
-Abdelhay Mellouli
-Mohamed Ouallou
+BENYEKHLEF Anouar  
+MALLOULI Abdelhay 
+OUALLOU Mohamed 
+AZIZ Soufiane
+AKAJOU Salma
+BENTALEB Mehdi
+EL ACHIRI Aymane
 
 **Encadré par :**  
 M. Essarraj Fouad
@@ -79,8 +83,8 @@ Les réseaux sociaux ne suffisent plus : besoin de référencement, de structura
 ### La Solution  
 Une plateforme de blog dynamique, sécurisée et scalable, accompagnée d’une application mobile permettant de notifier les utilisateurs en temps réel.
 
-La plateforme se compose de 4 modules interconnectés.  
-Dans ce sprint, nous avons démarré et réalisé le **Module 1**.
+La plateforme se compose de 7 sprints interconnectés.  
+Dans ce sprint, nous avons démarré et réalisé la cote publique.
 
 ---
 
@@ -101,23 +105,6 @@ Le Sprint 1 implémente les fonctionnalités essentielles constituant le **MVP (
 
 ![Use Case Public Visiteur](./images/public-visiteur-usecase.png)
 
----
-
-# Labs (Ateliers Pratiques Réalisés)
-
-Afin de mener à bien ce projet, plusieurs ateliers techniques ont été réalisés :
-
-- **Lab 1 : Vite**  
-  Mise en place de la structure du projet et configuration initiale, avec focus sur le responsive design via Bootstrap.
-
-- **Lab 2 : Ajax**  
-  Mise en place du serveur et des routes API pour la gestion des articles.
-
-- **Lab 3 : Github**  
-  Gestion de versions, collaboration, résolution d’erreurs et synchronisation du code.
-
-- **Lab 4 : PHP Naming Conventions**   
-  Structuration du code, bonnes pratiques de nommage, tests unitaires et correction de bogues.
 
 ---
 
@@ -169,7 +156,7 @@ Le Sprint 1 a permis de poser des bases solides pour la plateforme **Blog Solico
 
 Les prochains sprints se concentreront sur :
 -  L'Administration (Back-Office) - Le centre de contrôle sécurisé pour les gestionnaires.
-- s API REST (Le Pont) - L'interface d'échange de données.
+- API REST (Le Pont) - L'interface d'échange de données.
 - Application Mobile (Android) - L'extension native pour la fidélisation.  
 
 Merci pour votre attention.
