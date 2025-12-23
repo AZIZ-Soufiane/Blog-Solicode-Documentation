@@ -58,3 +58,23 @@ blog-solicode-documentation/
 ├── README.md                    # Fichier principal de documentation
 ├── liste-des-utilisateurs.md    # Liste des utilisateurs du projet
 
+```
+
+## 🐞 Règles de rédaction des issues
+- Le titre d’une issue doit obligatoirement respecter le format suivant :  
+  **Nom de la tâche – Travail à faire**
+- Une issue correspond à une seule tâche
+- La description doit expliquer brièvement le travail demandé
+- Les règles détaillées sont disponibles dans le dossier `issues/`
+
+---
+
+## 🔀 Règles de merge
+- Aucun merge direct sur la branche principale
+- Tout merge doit obligatoirement passer par une **Pull Request**
+- La Pull Request doit être validée avant le merge
+
+
+**Un lab explicatif de Github est disponible dans le dossier `labs/`**
+
+
