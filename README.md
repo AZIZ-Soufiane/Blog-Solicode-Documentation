@@ -65,7 +65,6 @@ blog-solicode-documentation/
   **Nom de la tâche – Travail à faire**
 - Une issue correspond à une seule tâche
 - La description doit expliquer brièvement le travail demandé
-- Les règles détaillées sont disponibles dans le dossier `issues/`
 
 ---
 
