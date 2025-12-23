@@ -53,7 +53,6 @@ style: |
     padding-left: 1em;
     margin: 1em 0;
   }
-
 ---
 
 ![bg left:40% 80%](https://via.placeholder.com/300x200?text=Logo+Solicode)
@@ -63,15 +62,16 @@ style: |
 
 **Réalisé par :**  
 BENYEKHLEF Anouar  
-MALLOULI Abdelhay 
-OUALLOU Mohamed 
-AZIZ Soufiane
-AKAJOU Salma
-BENTALEB Mehdi
-EL ACHIRI Aymane
+MALLOULI Abdelhay  
+OUALLOU Mohamed  
+AZIZ Soufiane  
+AKAJOU Salma  
+BENTALEB Mehdi  
+EL ACHIRI Aymane  
+HADDAD Yasmine  
 
 **Encadré par :**  
-M. Essarraj Fouad
+M. ESSARRAJ Fouad
 
 ---
 
@@ -80,22 +80,54 @@ M. Essarraj Fouad
 Solicode a besoin de communiquer sur ses activités via un canal numérique centralisé et maîtrisé.  
 Les réseaux sociaux ne suffisent plus : besoin de référencement, de structuration et d’une identité propre.
 
-### La Solution  
-Une plateforme de blog dynamique, sécurisée et scalable, accompagnée d’une application mobile permettant de notifier les utilisateurs en temps réel.
+<br>
+<br>
 
-La plateforme se compose de 7 sprints interconnectés.  
-Dans ce sprint, nous avons démarré et réalisé la cote publique.
+### La solution
+Une plateforme de blog dynamique, sécurisée et scalable, accompagnée d’une application mobile permettant de notifier les utilisateurs en temps réel.
 
 ---
 
-# Module 1 : Portail Web Public (Front-Office)
+La plateforme se compose de 7 sprints interconnectés :
+
+- Sprint 1 :
+- Sprint 2 :
+- Sprint 3 :
+- Sprint 4 :
+- Sprint 5 :
+- Sprint 6 :
+- Sprint 7 :
+
+<br>
+<br>
+
+Dans ce sprint, nous avons démarré et réalisé la partie publique.
+
+---
+
+# Méthode Scrum
+
+
+![Méthode Scrum](./images/scrum.jpg)
+
+
+---
+
+# Design Thinking
+
+![Design Thinking](./images/design-thinking.png)
+
+
+---
+
+# Sprint 1 : Portail Web Public (Front-Office)
 
 Interface visible par les visiteurs permettant :
 
-- Page d’accueil
-- Navigation
-- Recherche avancée
-- Lecture d’articles immersive
+- Page d’accueil  
+- Navigation  
+- Recherche avancée  
+- Lecture d’articles immersive  
 
 ---
 
@@ -105,7 +137,6 @@ Le Sprint 1 implémente les fonctionnalités essentielles constituant le **MVP (
 
 ![Use Case Public Visiteur](./images/public-visiteur-usecase.png)
 
-
 ---
 
 # Maquettes (Mockups)
@@ -113,7 +144,7 @@ Le Sprint 1 implémente les fonctionnalités essentielles constituant le **MVP (
 Les maquettes définissent l’interface utilisateur afin d’assurer une expérience claire, moderne et intuitive.  
 Nous avons utilisé Tailwind + Preline UI pour le design initial.
 
-### Représentation Visuelle
+### Représentation visuelle
 
 ![Mockup 1](./images/home-page-capture.png)
 
@@ -122,19 +153,20 @@ Nous avons utilisé Tailwind + Preline UI pour le design initial.
 ![Mockup 2](./images/search-page-capture.png)
 
 ---
+
 ![Mockup 3](./images/article-page-capture.png)
 
 ---
 
-# Diagramme de Classe
+# Diagramme de classes
 
-Le diagramme de classe modélise la base de données et définit les entités principales ainsi que leurs relations.
+Le diagramme de classes modélise la base de données et définit les entités principales ainsi que leurs relations.
 
 ![Diagramme de Classe](./images/diagramme-classes.png)
 
 ---
 
-# Réalisation Technique
+# Réalisation technique
 
 ### Back-End & Architecture
 - Framework : **Laravel 12**
@@ -145,6 +177,9 @@ Le diagramme de classe modélise la base de données et définit les entités pr
 - CSS : **Tailwind CSS**
 - UI Kit : **Preline UI**
 
+### Gestion de projet
+- GitHub
+
 ---
 
 # Conclusion
@@ -154,10 +189,7 @@ Le Sprint 1 a permis de poser des bases solides pour la plateforme **Blog Solico
 - Architecture scalable  
 - Expérience utilisateur bien définie  
 
-Les prochains sprints se concentreront sur :
--  L'Administration (Back-Office) - Le centre de contrôle sécurisé pour les gestionnaires.
-- API REST (Le Pont) - L'interface d'échange de données.
-- Application Mobile (Android) - L'extension native pour la fidélisation.  
+Les prochains sprints se concentreront sur la complétion des sprints suivants.
 
-Merci pour votre attention.
+Merci pour votre attention.  
 Questions ?

@@ -1,5 +1,5 @@
 # marp php-naming.md -o index.html
-marp --preview Slide.md
+marp --preview sprint1.md
 
 # CLI command:
 #  ./build.ps1
