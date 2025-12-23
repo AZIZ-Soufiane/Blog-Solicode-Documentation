@@ -16,3 +16,11 @@ Dossier des laboratoires (Labs) du projet **Blog Solicode**.
 - Fichiers **Markdown (.md)** explicatifs pour chaque lab
 - Chaque fichier correspond à un sujet précis utilisé dans le projet Blog
 
+## Structure des dossiers
+
+```
+Labs/
+    ├── README.md
+    ├── choix_labs.md
+    └── lab Github.md
+```
