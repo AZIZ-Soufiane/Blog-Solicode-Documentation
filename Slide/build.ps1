@@ -1,5 +1,5 @@
 # marp php-naming.md -o index.html
-marp --preview php-naming-conventions.md
+marp --preview Slide.md
 
 # CLI command:
 #  ./build.ps1
