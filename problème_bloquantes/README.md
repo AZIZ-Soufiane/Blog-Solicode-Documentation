@@ -20,7 +20,9 @@ Dossier des problèmes bloquants rencontrés lors du développement du projet **
 ---
 
 ## 📂 Structure du dossier
+```
 problemes_bloquantes/
 ├── problemes_bloquantes.md
 └── README.md
+```
 
