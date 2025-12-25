@@ -2,379 +2,812 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoliCode Blog - Gestion des Articles</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
-        rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Outfit', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: { 600: '#2563eb', 700: '#1d4ed8' }
-                    }
-                }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoliCode Blog - Gestion des Articles</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts: Inter & Outfit -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            primary: { 600: '#2563eb', 700: '#1d4ed8' }
+          }
         }
-    </script>
-    <style>
-        .hs-accordion.hs-accordion-active .hs-accordion-content {
-            display: block !important;
-        }
+      }
+    }
+  </script>
+  <style>
+    /* Fix for Preline Accordion/Dropdown */
+    .hs-accordion.hs-accordion-active .hs-accordion-content {
+      display: block !important;
+    }
 
-        .hs-dropdown.hs-dropdown-open .hs-dropdown-menu {
-            display: block !important;
-            opacity: 1 !important;
-        }
-    </style>
+    .hs-dropdown.hs-dropdown-open .hs-dropdown-menu {
+      display: block !important;
+      opacity: 1 !important;
+    }
+  </style>
 </head>
 
 <body class="bg-gray-50 dark:bg-slate-900">
 
-    <!-- Sidebar -->
-    <div id="application-sidebar"
-        class="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform hidden fixed top-0 left-0 bottom-0 z-[60] w-64 bg-white border-r border-gray-200 pt-7 pb-10 overflow-y-auto scrollbar-y lg:block lg:translate-x-0 lg:right-auto lg:bottom-0 dark:scrollbar-y dark:bg-slate-900 dark:border-gray-700">
-        <div class="px-6">
-            <a class="flex items-center gap-x-2 text-xl font-bold dark:text-white" href="#" aria-label="Brand">
-                <div class="flex items-center justify-center w-8 h-8 bg-blue-600 text-white rounded-md">
-                    <i data-lucide="activity" class="w-5 h-5"></i>
-                </div>
-                <span>Solicode<span class="text-blue-600">Blog</span></span>
-            </a>
+  <!-- Sidebar -->
+  <div id="application-sidebar"
+    class="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform hidden fixed top-0 left-0 bottom-0 z-[60] w-64 bg-white border-r border-gray-200 pt-7 pb-10 overflow-y-auto scrollbar-y lg:block lg:translate-x-0 lg:right-auto lg:bottom-0 dark:scrollbar-y dark:bg-slate-900 dark:border-gray-700">
+    <div class="px-6">
+      <a class="flex items-center gap-x-2 text-xl font-bold dark:text-white" href="../index.html" aria-label="Brand">
+        <div class="flex items-center justify-center w-8 h-8 bg-blue-600 text-white rounded-md">
+          <i data-lucide="activity" class="w-5 h-5"></i>
         </div>
-
-        <nav class="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
-            <ul class="space-y-1.5 flex flex-col h-full">
-                <li>
-                    <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
-                        href="../dashboard-admin.html">
-                        <i data-lucide="layout-dashboard" class="w-[18px] h-[18px]"></i>
-                        Dashboard
-                    </a>
-                </li>
-                <li class="my-4 border-t border-gray-100 dark:border-gray-800"></li>
-                <li class="mb-2 px-3 text-[10px] uppercase tracking-widest text-gray-400 font-bold font-heading">Contenu
-                </li>
-                <li>
-                    <a class="flex items-center gap-x-3 py-2.5 px-3 bg-blue-50 text-sm font-medium text-blue-600 rounded-lg dark:bg-blue-900/50 dark:text-blue-400 focus:outline-none"
-                        href="index.html">
-                        <i data-lucide="file-text" class="w-[18px] h-[18px]"></i>
-                        Articles
-                    </a>
-                </li>
-                <li>
-                    <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
-                        href="../categories/index.html">
-                        <i data-lucide="layers" class="w-[18px] h-[18px]"></i>
-                        Catégories
-                    </a>
-                </li>
-                <li>
-                    <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
-                        href="../tags/index.html">
-                        <i data-lucide="tag" class="w-[18px] h-[18px]"></i>
-                        Tags
-                    </a>
-                </li>
-                <li class="my-4 border-t border-gray-100 dark:border-gray-800"></li>
-                <li class="mb-2 px-3 text-[10px] uppercase tracking-widest text-gray-400 font-bold font-heading">Système
-                </li>
-                <li>
-                    <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
-                        href="../utilisateurs/index.html">
-                        <i data-lucide="users" class="w-[18px] h-[18px]"></i>
-                        Utilisateurs
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <span>Solicode<span class="text-blue-600">Blog</span></span>
+      </a>
     </div>
 
-    <!-- Hader duplicated from dashboard -->
-    <header
-        class="sticky top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-[48] w-full bg-white border-b text-sm py-2.5 sm:py-4 lg:pl-64 dark:bg-slate-900 dark:border-gray-700">
-        <nav class="flex basis-full items-center w-full mx-auto px-4 sm:px-6 md:px-8" aria-label="Global">
-            <div class="mr-5 lg:mr-0 lg:hidden">
-                <a class="flex items-center gap-x-2 text-xl font-semibold dark:text-white" href="#" aria-label="Brand">
-                    <span class="flex items-center justify-center w-8 h-8 bg-blue-600 text-white rounded-md">
-                        <i data-lucide="activity" class="w-5 h-5"></i>
-                    </span>
-                    <span>Solicode<span class="text-blue-600">Blog</span></span>
-                </a>
+    <nav class="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
+      <ul class="space-y-1.5 flex flex-col h-full">
+        <!-- Group 1: Main -->
+        <li>
+          <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
+            href="../index.html">
+            <i data-lucide="layout-dashboard" class="w-[18px] h-[18px]"></i>
+            Dashboard
+          </a>
+        </li>
+
+        <!-- Spacer -->
+        <li class="my-4 border-t border-gray-100 dark:border-gray-800"></li>
+
+        <!-- Group 2: Content -->
+        <li class="mb-2 px-3 text-[10px] uppercase tracking-widest text-gray-400 font-bold font-heading">Contenu</li>
+        <li>
+          <a class="flex items-center gap-x-3 py-2.5 px-3 bg-blue-50 text-sm font-medium text-blue-600 rounded-lg dark:bg-blue-900/50 dark:text-blue-400 focus:outline-none"
+            href="index.html">
+            <i data-lucide="file-text" class="w-[18px] h-[18px]"></i>
+            Articles
+          </a>
+        </li>
+        <li>
+          <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
+            href="../categories/index.html">
+            <i data-lucide="layers" class="w-[18px] h-[18px]"></i>
+            Catégories
+          </a>
+        </li>
+        <li>
+          <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
+            href="../tags/index.html">
+            <i data-lucide="tag" class="w-[18px] h-[18px]"></i>
+            Tags
+          </a>
+        </li>
+
+        <!-- Spacer -->
+        <li class="my-4 border-t border-gray-100 dark:border-gray-800"></li>
+
+        <!-- Group 3: Admin -->
+        <li class="mb-2 px-3 text-[10px] uppercase tracking-widest text-gray-400 font-bold font-heading">Système</li>
+        <li>
+          <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
+            href="../utilisateurs/index.html">
+            <i data-lucide="users" class="w-[18px] h-[18px]"></i>
+            Utilisateurs
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- End Sidebar -->
+
+  <!-- Navbar -->
+  <header
+    class="sticky top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-[48] w-full bg-white border-b text-sm py-2.5 sm:py-4 lg:pl-64 dark:bg-slate-900 dark:border-gray-700">
+    <nav class="flex basis-full items-center w-full mx-auto px-4 sm:px-6 md:px-8" aria-label="Global">
+      <div class="mr-5 lg:mr-0 lg:hidden">
+        <a class="flex items-center gap-x-2 text-xl font-semibold dark:text-white" href="#" aria-label="Brand">
+          <span class="flex items-center justify-center w-8 h-8 bg-blue-600 text-white rounded-md">
+            <i data-lucide="activity" class="w-5 h-5"></i>
+          </span>
+          <span>Solicode<span class="text-blue-600">Blog</span></span>
+        </a>
+      </div>
+
+      <div class="w-full flex items-center justify-end ml-auto sm:justify-between sm:gap-x-3 sm:order-3">
+        <div class="hidden sm:block">
+          <label for="icon" class="sr-only">Search</label>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none z-20 pl-4">
+              <i data-lucide="search" class="w-4 h-4 text-gray-400"></i>
             </div>
-            <div class="w-full flex items-center justify-end ml-auto sm:justify-between sm:gap-x-3 sm:order-3">
-                <div class="hidden sm:block"></div>
-                <div class="flex flex-row items-center justify-end gap-2">
-                    <div class="relative items-center inline-flex" data-hs-dropdown-placement="bottom-right">
-                        <button id="hs-dropdown-with-header" type="button"
-                            class="hs-dropdown-toggle inline-flex justify-center items-center gap-2 w-[2.375rem] h-[2.375rem] rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-slate-800 dark:focus:ring-slate-700 dark:focus:ring-offset-gray-800">
-                            <img class="inline-block h-[2.375rem] w-[2.375rem] rounded-full ring-2 ring-white dark:ring-gray-800"
-                                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                                alt="Image Description">
-                        </button>
-                        <div
-                            class="absolute right-0 top-full mt-2 z-50 transition-[opacity,margin] duration opacity-0 hidden min-w-[15rem] bg-white shadow-md rounded-lg p-2 dark:bg-gray-800 dark:border dark:border-gray-700">
-                            <div class="py-3 px-5 -m-2 bg-gray-100 rounded-t-lg dark:bg-gray-700">
-                                <p class="text-sm text-gray-500 dark:text-gray-400">Connecté en tant que</p>
-                                <p class="text-sm font-medium text-gray-800 dark:text-gray-300">admin@solicode.co</p>
-                            </div>
-                            <div class="mt-2 py-2 first:pt-0 last:pb-0">
-                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100"
-                                    href="#">Mon Profil</a>
-                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-red-600 hover:bg-gray-100"
-                                    href="../index.html">Se déconnecter</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main id="content" role="main" class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:pl-72 h-screen">
-
-        <!-- Table Section -->
-        <div class="flex flex-col">
-            <div class="-m-1.5 overflow-x-auto">
-                <div class="p-1.5 min-w-full inline-block align-middle">
-                    <div
-                        class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden dark:bg-slate-900 dark:border-gray-700">
-                        <!-- Header -->
-                        <div
-                            class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-gray-700">
-                            <div>
-                                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Articles</h2>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Gérez, publiez et modérez le
-                                    contenu.</p>
-                            </div>
-                            <div>
-                                <div class="inline-flex gap-x-2">
-                                    <div class="max-w-xs">
-                                        <label for="hs-as-table-product-review-search"
-                                            class="sr-only">Rechercher</label>
-                                        <div class="relative">
-                                            <input type="text" name="hs-as-table-product-review-search"
-                                                id="hs-as-table-product-review-search"
-                                                class="py-2 px-3 ps-11 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                                                placeholder="Rechercher par titre">
-                                            <div
-                                                class="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-4">
-                                                <i data-lucide="search" class="w-4 h-4 text-gray-400"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="max-w-[150px]">
-                                        <select
-                                            class="py-2 px-3 pe-9 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
-                                            <option selected>Toutes catégories</option>
-                                            <option>Laravel</option>
-                                            <option>PHP</option>
-                                            <option>Mobile</option>
-                                        </select>
-                                    </div>
-                                    <div class="max-w-[120px]">
-                                        <select
-                                            class="py-2 px-3 pe-9 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
-                                            <option selected>Tous statuts</option>
-                                            <option>Publié</option>
-                                            <option>Brouillon</option>
-                                            <option>Archivé</option>
-                                        </select>
-                                    </div>
-                                    <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-                                        href="form.html">
-                                        <i data-lucide="plus" class="w-4 h-4"></i>
-                                        Nouveau
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Table -->
-                        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                            <thead class="bg-gray-50 dark:bg-slate-800">
-                                <tr>
-                                    <th scope="col" class="pl-6 py-3 text-left w-12">
-                                        <input type="checkbox"
-                                            class="border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700">
-                                    </th>
-                                    <th scope="col" class="pl-6 lg:pl-3 xl:pl-0 pr-6 py-3 text-left">
-                                        <span
-                                            class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">Article</span>
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 text-left">
-                                        <span
-                                            class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">Auteur</span>
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 text-left">
-                                        <span
-                                            class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">Catégorie</span>
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 text-left">
-                                        <span
-                                            class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">Statut</span>
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 text-left">
-                                        <span
-                                            class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">Date</span>
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 text-right">Actions</th>
-                                </tr>
-                            </thead>
-
-                            <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
-                                <!-- Item 1 -->
-                                <tr>
-                                    <td class="h-px w-px whitespace-nowrap pl-6 py-3">
-                                        <input type="checkbox"
-                                            class="border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700">
-                                    </td>
-                                    <td class="h-px w-px whitespace-nowrap">
-                                        <div class="pl-6 lg:pl-3 xl:pl-0 pr-6 py-3">
-                                            <div class="flex items-center gap-x-3">
-                                                <img class="inline-block h-[2.375rem] w-[2.375rem] rounded-md"
-                                                    src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-                                                    alt="Cover">
-                                                <div class="grow">
-                                                    <span
-                                                        class="block text-sm font-semibold text-gray-800 dark:text-gray-200">Introduction
-                                                        à Laravel 10</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="h-px w-px whitespace-nowrap px-6 py-3">
-                                        <div class="flex items-center gap-x-2">
-                                            <img class="inline-block h-6 w-6 rounded-full"
-                                                src="https://images.unsplash.com/photo-1531927557220-a9e23c1be048?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                                                alt="Avatar">
-                                            <span class="text-sm text-gray-600 dark:text-gray-400">Sarah J.</span>
-                                        </div>
-                                    </td>
-                                    <td class="h-px w-px whitespace-nowrap px-6 py-3">
-                                        <span
-                                            class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-lg text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Backend</span>
-                                    </td>
-                                    <td class="h-px w-px whitespace-nowrap px-6 py-3">
-                                        <span
-                                            class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Publié</span>
-                                    </td>
-                                    <td class="h-px w-px whitespace-nowrap px-6 py-3">
-                                        <span class="text-sm text-gray-600 dark:text-gray-400">12 Déc 2025</span>
-                                    </td>
-                                    <td class="h-px w-px whitespace-nowrap px-6 py-1.5 text-right">
-                                        <button type="button"
-                                            class="text-blue-600 hover:text-blue-800 text-sm font-medium mr-3">Éditer</button>
-                                        <button type="button"
-                                            class="text-red-600 hover:text-red-800 text-sm font-medium">Supprimer</button>
-                                    </td>
-                                </tr>
-
-                                <!-- Item 2 -->
-                                <tr>
-                                    <td class="h-px w-px whitespace-nowrap pl-6 py-3">
-                                        <input type="checkbox"
-                                            class="border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700">
-                                    </td>
-                                    <td class="h-px w-px whitespace-nowrap">
-                                        <div class="pl-6 lg:pl-3 xl:pl-0 pr-6 py-3">
-                                            <div class="flex items-center gap-x-3">
-                                                <div
-                                                    class="flex items-center justify-center w-[2.375rem] h-[2.375rem] bg-gray-100 rounded-md dark:bg-slate-700">
-                                                    <i data-lucide="image" class="w-5 h-5 text-gray-400"></i>
-                                                </div>
-                                                <div class="grow">
-                                                    <span
-                                                        class="block text-sm font-semibold text-gray-800 dark:text-gray-200">Les
-                                                        bases de Jetpack Compose</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="h-px w-px whitespace-nowrap px-6 py-3">
-                                        <div class="flex items-center gap-x-2">
-                                            <span
-                                                class="inline-block w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs text-blue-600 font-bold">JD</span>
-                                            <span class="text-sm text-gray-600 dark:text-gray-400">John Doe</span>
-                                        </div>
-                                    </td>
-                                    <td class="h-px w-px whitespace-nowrap px-6 py-3">
-                                        <span
-                                            class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-lg text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Mobile</span>
-                                    </td>
-                                    <td class="h-px w-px whitespace-nowrap px-6 py-3">
-                                        <span
-                                            class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300">Brouillon</span>
-                                    </td>
-                                    <td class="h-px w-px whitespace-nowrap px-6 py-3">
-                                        <span class="text-sm text-gray-600 dark:text-gray-400">10 Déc 2025</span>
-                                    </td>
-                                    <td class="h-px w-px whitespace-nowrap px-6 py-1.5 text-right">
-                                        <button type="button"
-                                            class="text-blue-600 hover:text-blue-800 text-sm font-medium mr-3">Éditer</button>
-                                        <button type="button"
-                                            class="text-red-600 hover:text-red-800 text-sm font-medium">Supprimer</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- Footer -->
-                        <div
-                            class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200 dark:border-gray-700">
-                            <div>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">
-                                    <span class="font-semibold text-gray-800 dark:text-gray-200">2</span> résultats
-                                </p>
-                            </div>
-                            <div>
-                                <div class="inline-flex gap-x-2">
-                                    <button type="button"
-                                        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800">Précédent</button>
-                                    <button type="button"
-                                        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800">Suivant</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <input type="text" id="icon" name="icon"
+              class="py-2 pl-11 pr-10 block w-full md:w-80 border-gray-200 rounded-full text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+              placeholder="Rechercher...">
+          </div>
         </div>
-    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
-    <script>
-        lucide.createIcons();
-        document.addEventListener('DOMContentLoaded', () => {
-            const dropdownToggle = document.getElementById('hs-dropdown-with-header');
-            if (dropdownToggle) {
-                const dropdownMenu = dropdownToggle.nextElementSibling;
-                dropdownToggle.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    dropdownMenu.classList.toggle('hidden');
-                    dropdownMenu.classList.toggle('opacity-0');
-                });
-                document.addEventListener('click', (e) => {
-                    if (!dropdownToggle.contains(e.target)) {
-                        dropdownMenu.classList.add('hidden');
-                        dropdownMenu.classList.add('opacity-0');
-                    }
-                });
+        <div class="flex flex-row items-center justify-end gap-2">
+          <!-- Profile Dropdown -->
+          <div class="relative items-center inline-flex" data-hs-dropdown-placement="bottom-right">
+            <button id="hs-dropdown-with-header" type="button"
+              class="hs-dropdown-toggle inline-flex justify-center items-center gap-2 w-[2.375rem] h-[2.375rem] rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-slate-800 dark:focus:ring-slate-700 dark:focus:ring-offset-gray-800">
+              <img class="inline-block h-[2.375rem] w-[2.375rem] rounded-full ring-2 ring-white dark:ring-gray-800"
+                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                alt="Image Description">
+            </button>
+            <div
+              class="absolute right-0 top-full mt-2 z-50 transition-[opacity,margin] duration opacity-0 hidden min-w-[15rem] bg-white shadow-md rounded-lg p-2 dark:bg-gray-800 dark:border dark:border-gray-700"
+              aria-labelledby="hs-dropdown-with-header">
+              <div class="py-3 px-5 -m-2 bg-gray-100 rounded-t-lg dark:bg-gray-700">
+                <p class="text-sm text-gray-500 dark:text-gray-400">Connecté en tant que</p>
+                <p class="text-sm font-medium text-gray-800 dark:text-gray-300">admin@solicode.co</p>
+              </div>
+              <div class="mt-2 py-2 first:pt-0 last:pb-0">
+                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  href="#">
+                  <i data-lucide="user" class="w-4 h-4"></i>
+                  Mon Profil
+                </a>
+                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-red-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-400"
+                  href="../index.html">
+                  <i data-lucide="log-out" class="w-4 h-4"></i>
+                  Se déconnecter
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End Navbar -->
+
+  <!-- Main Content -->
+  <main id="content" role="main" class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:pl-72">
+    <div class="mb-8 flex items-center justify-between flex-wrap gap-4">
+      <div>
+        <h1 class="text-2xl font-bold text-gray-800 dark:text-white">Gestion des Articles</h1>
+        <p class="text-sm text-gray-600 dark:text-gray-400">Créer, modifier, publier vos articles.</p>
+      </div>
+      <div class="flex gap-2">
+        <button id="openAddArticleModal"
+          class="inline-flex items-center gap-x-2 py-2 px-4 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+          Nouveau
+        </button>
+      </div>
+    </div>
+
+    <!-- Articles Table -->
+    <div class="bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700">
+      <div class="p-4 overflow-x-auto">
+        <div class="flex flex-wrap items-center mb-4 gap-4 justify-end">
+          <div>
+            <label class="sr-only" for="articleSearch">Rechercher</label>
+            <input id="articleSearch" type="text" placeholder="Rechercher par titre..."
+              class="py-2 px-4 pr-8 block w-full bg-white border border-gray-200 text-gray-800 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+          </div>
+          <!-- Categories Custom Dropdown -->
+          <div id="categoriesDropdown" class="relative inline-block text-left">
+            <button type="button"
+              class="inline-flex justify-between items-center w-full sm:w-56 py-2 px-4 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-slate-800">
+              <span class="truncate">Toutes les catégories</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-gray-500"></i>
+            </button>
+
+            <div
+              class="hidden absolute top-full left-0 sm:left-auto sm:right-0 mt-2 w-56 bg-white sm:shadow-xl rounded-lg p-2 dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+              style="z-index: 9999;">
+
+              <!-- Toutes catégories (Reset option) -->
+
+
+              <!-- Laravel -->
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 transition-colors"
+                href="?category=laravel">
+                <svg class="w-4 h-4 text-red-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="m12 19 7-7 3 3-7 7-3-3z" />
+                  <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                  <path d="m2 2 7.586 7.586" />
+                  <circle cx="11" cy="11" r="2" />
+                </svg>
+                Laravel
+              </a>
+
+              <!-- PHP -->
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 transition-colors"
+                href="?category=php">
+                <svg class="w-4 h-4 text-indigo-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5" />
+                  <path d="M8.5 8.5v.01" />
+                  <path d="M16 12v.01" />
+                  <path d="M12 16v.01" />
+                </svg>
+                PHP
+              </a>
+
+              <!-- Android -->
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 transition-colors"
+                href="?category=android">
+                <svg class="w-4 h-4 text-green-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                  <path d="M12 18h.01" />
+                </svg>
+                Android
+              </a>
+
+              <!-- Design -->
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 transition-colors"
+                href="?category=design">
+                <svg class="w-4 h-4 text-pink-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72Z" />
+                  <path d="m14 7 3 3" />
+                  <path d="M5 6v4" />
+                  <path d="M19 14v4" />
+                  <path d="M10 2v2" />
+                  <path d="M7 8H3" />
+                  <path d="M21 16h-4" />
+                  <path d="M11 3H9" />
+                </svg>
+                Design
+              </a>
+
+              <!-- Éducation -->
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 transition-colors"
+                href="?category=education">
+                <svg class="w-4 h-4 text-amber-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+                Éducation
+              </a>
+
+              <!-- Activités -->
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 transition-colors"
+                href="?category=activities">
+                <svg class="w-4 h-4 text-cyan-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.71-2.16 0-3" />
+                  <path d="m2.3 2.3 7.2 7.2" />
+                  <path d="m14 11 9-9" />
+                  <path d="m9 14-7 9" />
+                  <path d="m21.7 21.7-7.2-7.2" />
+                  <path d="M11 14c-1.26 1.5-5 2-5 2s.5-3.74 2-5c.84-.71 2.16-.71 3 0" />
+                  <path d="M13 10c1.26-1.5 5-2 5-2s-.5 3.74-2 5c-.84.71-2.16.71-3 0" />
+                </svg>
+                Activités
+              </a>
+            </div>
+          </div>
+
+          <!-- Status Custom Dropdown -->
+          <div id="statusDropdown" class="relative inline-block text-left">
+            <button type="button"
+              class="inline-flex justify-between items-center w-full sm:w-56 py-2 px-4 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-slate-800">
+              <span class="truncate">Tous les statuts</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-gray-500"></i>
+            </button>
+
+            <div
+              class="hidden absolute top-full left-0 sm:left-auto sm:right-0 mt-2 w-56 bg-white sm:shadow-xl rounded-lg p-2 dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+              style="z-index: 9999;">
+
+              <!-- Tous statuts (Reset) -->
+
+
+              <!-- Publié -->
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 transition-colors"
+                href="#">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i>
+                Publié
+              </a>
+
+              <!-- Brouillon -->
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 transition-colors"
+                href="#">
+                <i data-lucide="file-edit" class="w-4 h-4 text-gray-500"></i>
+                Brouillon
+              </a>
+
+              <!-- Archivé -->
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 transition-colors"
+                href="#">
+                <i data-lucide="archive" class="w-4 h-4 text-red-500"></i>
+                Archivé
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <table id="articlesTable" class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+          <thead>
+            <tr>
+
+              <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                ARTICLE</th>
+              <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                AUTEUR</th>
+              <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                CATÉGORIE</th>
+              <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                STATUT</th>
+              <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                DATE DE CRÉATION</th>
+              <th scope="col" class="px-3 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
+            <!-- Row 1 -->
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50 transition-colors">
+              <td class="px-3 py-4 whitespace-nowrap">
+                <div class="flex items-center gap-3">
+
+                  <div class="text-sm font-medium text-gray-900 dark:text-white">Solicode Tangier: Empowering Youth...
+                  </div>
+                </div>
+              </td>
+              <td class="px-3 py-4 whitespace-nowrap">
+                <div class="flex items-center gap-2">
+                  <div
+                    class="h-6 w-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs font-bold">
+                    AF
+                  </div>
+                  <span class="text-sm text-gray-600 dark:text-gray-400">Ayoub Faqihi</span>
+                </div>
+              </td>
+              <td class="px-3 py-4 whitespace-nowrap">
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-slate-800 dark:text-gray-200">
+                  Education
+                </span>
+              </td>
+              <td class="px-3 py-4 whitespace-nowrap">
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+                  Publié
+                </span>
+              </td>
+              <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+                19 Dec 2025
+              </td>
+              <td class="px-3 py-4 whitespace-nowrap text-right text-sm font-medium">
+                <button
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800"
+                  data-edit-btn title="Modifier">
+                  <i data-lucide="pencil" class="w-4 h-4 text-gray-600 dark:text-gray-400"></i>
+                </button>
+                <button
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800"
+                  data-delete-btn title="Supprimer">
+                  <i data-lucide="trash-2" class="w-4 h-4 text-red-600"></i>
+                </button>
+              </td>
+            </tr>
+            <!-- Row 2 -->
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50 transition-colors">
+              <td class="px-3 py-4 whitespace-nowrap">
+                <div class="flex items-center gap-3">
+
+                  <div class="text-sm font-medium text-gray-900 dark:text-white">IT-Wave: Celebrating Digital
+                    Innovation...</div>
+                </div>
+              </td>
+              <td class="px-3 py-4 whitespace-nowrap">
+                <div class="flex items-center gap-2">
+                  <div
+                    class="h-6 w-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs font-bold">
+                    YH</div>
+                  <span class="text-sm text-gray-600 dark:text-gray-400">Yassine Hajjar</span>
+                </div>
+              </td>
+              <td class="px-3 py-4 whitespace-nowrap">
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-slate-800 dark:text-gray-200">
+                  Activities
+                </span>
+              </td>
+              <td class="px-3 py-4 whitespace-nowrap">
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+                  Publié
+                </span>
+              </td>
+              <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+                19 Dec 2025
+              </td>
+              <td class="px-3 py-4 whitespace-nowrap text-right text-sm font-medium">
+                <button
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800"
+                  data-edit-btn title="Modifier">
+                  <i data-lucide="pencil" class="w-4 h-4 text-gray-600 dark:text-gray-400"></i>
+                </button>
+                <button
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800"
+                  data-delete-btn title="Supprimer">
+                  <i data-lucide="trash-2" class="w-4 h-4 text-red-600"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div id="pagination" class="flex justify-center items-center gap-2 mt-4"></div>
+      </div>
+    </div>
+  </main>
+  <!-- End Main Content -->
+
+  <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+  <script>
+    // Initialisation des icônes
+    lucide.createIcons();
+
+    // Gestion du menu déroulant des catégories et statuts
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Fonction pour gérer un dropdown
+      function setupDropdown(dropdownId) {
+        const dropdownButton = document.querySelector(`#${dropdownId} button`);
+        const dropdownMenu = document.querySelector(`#${dropdownId} > div:not(button)`);
+
+        if (dropdownButton && dropdownMenu) {
+          // Toggle menu
+          dropdownButton.addEventListener('click', function (e) {
+            e.stopPropagation();
+
+            // Fermer les autres dropdowns s'ils sont ouverts (optionnel mais recommandé pour UX)
+            const allMenus = document.querySelectorAll('[id$="Dropdown"] > div:not(button)');
+            allMenus.forEach(menu => {
+              if (menu !== dropdownMenu) menu.classList.add('hidden');
+            });
+            const allButtons = document.querySelectorAll('[id$="Dropdown"] button i[data-lucide]');
+            allButtons.forEach(icon => {
+              // Reset other icons if needed
+            });
+
+            dropdownMenu.classList.toggle('hidden');
+
+            // Icon toggle
+            const chevron = this.querySelector('i[data-lucide="chevron-down"]');
+            if (chevron) {
+              if (dropdownMenu.classList.contains('hidden')) {
+                chevron.setAttribute('data-lucide', 'chevron-down');
+              } else {
+                chevron.setAttribute('data-lucide', 'chevron-up');
+              }
+              lucide.createIcons({ icons: chevron });
             }
+          });
+
+          // Click outside
+          document.addEventListener('click', function (e) {
+            if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+              dropdownMenu.classList.add('hidden');
+              const chevron = dropdownButton.querySelector('i[data-lucide]');
+              if (chevron) {
+                chevron.setAttribute('data-lucide', 'chevron-down');
+                lucide.createIcons({ icons: chevron });
+              }
+            }
+          });
+
+          // Select item
+          dropdownMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function (e) {
+              e.preventDefault();
+
+              // Update Button Text
+              const text = this.textContent.trim();
+              dropdownButton.querySelector('span:not(.sr-only)').textContent = text;
+
+              // Manage Active/Inactive Classes
+              const activeClasses = ['bg-blue-50', 'text-blue-600', 'dark:bg-blue-900/30', 'dark:text-blue-400'];
+              const inactiveClasses = ['text-gray-800', 'hover:bg-blue-50', 'hover:text-blue-600', 'dark:text-gray-400', 'dark:hover:bg-blue-900/30', 'dark:hover:text-blue-400'];
+
+              // Reset all links to inactive
+              dropdownMenu.querySelectorAll('a').forEach(l => {
+                l.classList.remove(...activeClasses);
+                l.classList.add(...inactiveClasses);
+              });
+
+              // Set clicked link to active
+              this.classList.remove(...inactiveClasses);
+              this.classList.add(...activeClasses);
+
+              // Close Menu and Reset Icon
+              dropdownMenu.classList.add('hidden');
+              const chevron = dropdownButton.querySelector('i[data-lucide]');
+              if (chevron) {
+                chevron.setAttribute('data-lucide', 'chevron-down');
+                lucide.createIcons({ icons: chevron });
+              }
+            });
+          });
+        }
+      }
+
+      setupDropdown('categoriesDropdown');
+      setupDropdown('statusDropdown');
+    });
+
+    // Dropdown Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdownToggle = document.getElementById('hs-dropdown-with-header');
+      if (dropdownToggle) {
+        const dropdownMenu = dropdownToggle.nextElementSibling;
+        dropdownToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          dropdownMenu.classList.toggle('hidden');
+          dropdownMenu.classList.toggle('opacity-0');
         });
-    </script>
+        document.addEventListener('click', (e) => {
+          if (!dropdownToggle.contains(e.target)) {
+            dropdownMenu.classList.add('hidden');
+            dropdownMenu.classList.add('opacity-0');
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- Add Article Modal -->
+  <div id="addArticleModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black/50">
+    <div class="flex items-center min-h-screen px-4">
+      <div class="bg-white dark:bg-slate-800 rounded-xl w-full max-w-lg mx-auto p-6">
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="text-lg font-bold text-gray-800 dark:text-white">Nouvel Article</h3>
+          <button id="closeAddArticleModal" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Titre</label>
+            <input type="text"
+              class="mt-1 block w-full border-gray-200 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+              placeholder="Titre de l'article">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Catégorie</label>
+            <select
+              class="mt-1 block w-full border-gray-200 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
+              <option>Backend</option>
+              <option>Mobile</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Contenu</label>
+            <textarea
+              class="mt-1 block w-full border-gray-200 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+              rows="3" placeholder="Contenu..."></textarea>
+          </div>
+          <div class="flex justify-end gap-2 pt-4">
+            <button type="button" id="cancelAddArticleModal"
+              class="py-2 px-4 rounded-lg text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 dark:bg-slate-700 dark:text-gray-300 dark:hover:bg-slate-600">Annuler</button>
+            <button type="submit"
+              class="py-2 px-4 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700">Créer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const openBtn = document.getElementById('openAddArticleModal');
+      const modal = document.getElementById('addArticleModal');
+      const closeIds = ['closeAddArticleModal', 'cancelAddArticleModal'];
+      openBtn?.addEventListener('click', () => modal?.classList.remove('hidden'));
+      closeIds.forEach(id => {
+        document.getElementById(id)?.addEventListener('click', () => modal?.classList.add('hidden'));
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') modal?.classList.add('hidden');
+      });
+    });
+  </script>
+
+  <!-- Edit Article Modal -->
+  <div id="editArticleModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black/50">
+    <div class="flex items-center min-h-screen px-4">
+      <div class="bg-white dark:bg-slate-800 rounded-xl w-full max-w-lg mx-auto p-6">
+        <div class="flex justify-between items-start mb-4">
+          <h3 id="editArticleTitle" class="text-lg font-bold text-gray-800 dark:text-white">Modifier Article</h3>
+          <button id="closeEditArticleModal" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Titre</label>
+            <input id="editArticleTitleInput" type="text"
+              class="mt-1 block w-full border-gray-200 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
+          </div>
+          <div class="flex justify-end gap-2 pt-4">
+            <button type="button" id="cancelEditArticleModal"
+              class="py-2 px-4 rounded-lg text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 dark:bg-slate-700 dark:text-gray-300 dark:hover:bg-slate-600">Annuler</button>
+            <button type="submit"
+              class="py-2 px-4 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Modal -->
+  <div id="deleteModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black/50">
+    <div class="flex items-center min-h-screen px-4">
+      <div class="bg-white dark:bg-slate-800 rounded-xl w-full max-w-sm mx-auto p-6">
+        <h3 id="deleteModalText" class="text-md font-medium text-gray-800 dark:text-white mb-6"></h3>
+        <div class="flex justify-end gap-2">
+          <button id="cancelDeleteModal"
+            class="py-2 px-4 rounded-lg text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 dark:bg-slate-700 dark:text-gray-300 dark:hover:bg-slate-600">Annuler</button>
+          <button id="confirmDeleteModal"
+            class="py-2 px-4 rounded-lg text-sm font-medium bg-red-600 text-white hover:bg-red-700">Supprimer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Edit modal
+      const editModal = document.getElementById('editArticleModal');
+      const editTitle = document.getElementById('editArticleTitle');
+      const titleInput = document.getElementById('editArticleTitleInput');
+      document.querySelectorAll('[data-edit-btn]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const row = btn.closest('tr');
+          // Title is in 2nd cell (index 1), inside a div
+          const title = row.cells[1].querySelector('.text-gray-900').textContent.trim();
+          editTitle.textContent = `Modifier "${title}"`;
+          titleInput.value = title;
+          editModal.classList.remove('hidden');
+        });
+      });
+      ['closeEditArticleModal', 'cancelEditArticleModal'].forEach(id => {
+        document.getElementById(id)?.addEventListener('click', () => editModal.classList.add('hidden'));
+      });
+
+      // Delete modal
+      const deleteModal = document.getElementById('deleteModal');
+      const deleteText = document.getElementById('deleteModalText');
+      document.querySelectorAll('[data-delete-btn]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const row = btn.closest('tr');
+          const title = row.cells[1].querySelector('.text-gray-900').textContent.trim();
+          deleteText.textContent = `Supprimer définitivement "${title}" ?`;
+          deleteModal.classList.remove('hidden');
+        });
+      });
+      ['cancelDeleteModal', 'confirmDeleteModal'].forEach(id => {
+        document.getElementById(id)?.addEventListener('click', () => deleteModal.classList.add('hidden'));
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const rows = Array.from(document.querySelectorAll('#articlesTable tbody tr'));
+      const searchInput = document.getElementById('articleSearch');
+      const paginationBox = document.getElementById('pagination');
+      const perPage = 5;
+      let currentPage = 1;
+      let categoryFilter = '';
+      let statusFilter = '';
+
+      // Initialize Preline comboboxes and set up listeners
+      function initComboboxes() {
+        // Category combobox
+        const categoryCombobox = document.getElementById('categoryCombobox');
+        if (categoryCombobox && window.HSComboBox) {
+          const categoryInstance = HSComboBox.getInstance(categoryCombobox, true);
+          if (categoryInstance) {
+            categoryCombobox.addEventListener('change.hs.combobox', (e) => {
+              const data = categoryInstance.element.getCurrentData();
+              categoryFilter = data ? (data.value || '') : '';
+              currentPage = 1;
+              render();
+            });
+          }
+        }
+
+        // Status combobox
+        const statusCombobox = document.getElementById('statusCombobox');
+        if (statusCombobox && window.HSComboBox) {
+          const statusInstance = HSComboBox.getInstance(statusCombobox, true);
+          if (statusInstance) {
+            statusCombobox.addEventListener('change.hs.combobox', (e) => {
+              const data = statusInstance.element.getCurrentData();
+              statusFilter = data ? (data.value || '') : '';
+              currentPage = 1;
+              render();
+            });
+          }
+        }
+      }
+
+      function applyFilters() {
+        const term = searchInput.value.toLowerCase();
+        return rows.filter(row => {
+          // Title in cell 1 (2nd column)
+          const title = row.cells[1].textContent.toLowerCase();
+          // Category in cell 3 (4th column)
+          const rowCat = row.cells[3].textContent.trim();
+          // Status in cell 4 (5th column)
+          const rowStat = row.cells[4].textContent.trim();
+
+          const matchesTitle = title.includes(term);
+          const matchesCat = categoryFilter === '' || rowCat === categoryFilter;
+          const matchesStat = statusFilter === '' || rowStat === statusFilter;
+          return matchesTitle && matchesCat && matchesStat;
+        });
+      }
+
+      function render() {
+        const filtered = applyFilters();
+        const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+        currentPage = Math.min(currentPage, totalPages);
+        rows.forEach(r => (r.style.display = 'none'));
+        const start = (currentPage - 1) * perPage;
+        const visible = filtered.slice(start, start + perPage);
+        visible.forEach(r => (r.style.display = ''));
+        renderPagination(totalPages);
+      }
+
+      function renderPagination(totalPages) {
+        paginationBox.innerHTML = '';
+        const createBtn = (label, page, disabled = false, active = false) => {
+          const btn = document.createElement('button');
+          btn.textContent = label;
+          btn.className = `px-3 py-1 rounded-md text-sm ${active ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300'} ${disabled ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-200 dark:hover:bg-slate-600'}`;
+          if (!disabled) {
+            btn.addEventListener('click', () => { currentPage = page; render(); });
+          }
+          paginationBox.appendChild(btn);
+        };
+        createBtn('«', currentPage - 1, currentPage === 1);
+        for (let p = 1; p <= totalPages; p++) {
+          createBtn(p, p, false, p === currentPage);
+        }
+        createBtn('»', currentPage + 1, currentPage === totalPages);
+      }
+
+      searchInput.addEventListener('input', () => {
+        currentPage = 1;
+        render();
+      });
+
+      // Wait for Preline to initialize, then set up comboboxes
+      setTimeout(() => {
+        initComboboxes();
+        render();
+      }, 100);
+    });
+  </script>
+
 </body>
 
 </html>

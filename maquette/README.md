@@ -36,6 +36,7 @@ Il contient les maquettes HTML représentant les interfaces du projet.
 │   │   ├── search.html
 │   │   └── login.html
 │   │   └── register.html
-   └── README.md
+    └── README.md
+
 ```
 
