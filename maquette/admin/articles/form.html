@@ -73,20 +73,7 @@
                         Articles
                     </a>
                 </li>
-                <li>
-                    <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
-                        href="../categories/index.html">
-                        <i data-lucide="layers" class="w-[18px] h-[18px]"></i>
-                        Catégories
-                    </a>
-                </li>
-                <li>
-                    <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
-                        href="../tags/index.html">
-                        <i data-lucide="tag" class="w-[18px] h-[18px]"></i>
-                        Tags
-                    </a>
-                </li>
+
             </ul>
         </nav>
     </div>
@@ -103,32 +90,7 @@
                     <span>Solicode<span class="text-blue-600">Blog</span></span>
                 </a>
             </div>
-            <div class="w-full flex items-center justify-end ml-auto sm:justify-between sm:gap-x-3 sm:order-3">
-                <div class="hidden sm:block"></div>
-                <div class="flex flex-row items-center justify-end gap-2">
-                    <div class="relative items-center inline-flex" data-hs-dropdown-placement="bottom-right">
-                        <button id="hs-dropdown-with-header" type="button"
-                            class="hs-dropdown-toggle inline-flex justify-center items-center gap-2 w-[2.375rem] h-[2.375rem] rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-slate-800 dark:focus:ring-slate-700 dark:focus:ring-offset-gray-800">
-                            <img class="inline-block h-[2.375rem] w-[2.375rem] rounded-full ring-2 ring-white dark:ring-gray-800"
-                                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                                alt="Image Description">
-                        </button>
-                        <div
-                            class="absolute right-0 top-full mt-2 z-50 transition-[opacity,margin] duration opacity-0 hidden min-w-[15rem] bg-white shadow-md rounded-lg p-2 dark:bg-gray-800 dark:border dark:border-gray-700">
-                            <div class="py-3 px-5 -m-2 bg-gray-100 rounded-t-lg dark:bg-gray-700">
-                                <p class="text-sm text-gray-500 dark:text-gray-400">Connecté en tant que</p>
-                                <p class="text-sm font-medium text-gray-800 dark:text-gray-300">admin@solicode.co</p>
-                            </div>
-                            <div class="mt-2 py-2 first:pt-0 last:pb-0">
-                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100"
-                                    href="#">Mon Profil</a>
-                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-red-600 hover:bg-gray-100"
-                                    href="../index.html">Se déconnecter</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </nav>
     </header>
 
@@ -164,37 +126,85 @@
                         </div>
                     </div>
 
-                    <!-- Rich Editor -->
                     <div
                         class="bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 dark:bg-slate-900 dark:border-gray-700">
                         <label class="block text-sm font-medium mb-2 dark:text-white">Contenu</label>
                         <div class="border border-gray-200 rounded-xl overflow-hidden dark:border-gray-700">
                             <!-- Toolbar -->
                             <div
-                                class="flex items-center gap-x-1 p-2 border-b border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-slate-800">
+                                class="flex flex-wrap items-center gap-1 p-2 border-b border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-slate-800">
                                 <button type="button"
-                                    class="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg hover:bg-white text-gray-800 shadow-sm hover:shadow dark:text-gray-200 dark:hover:bg-slate-700 focus:outline-none">
+                                    class="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg hover:bg-white text-gray-800 shadow-sm hover:shadow dark:text-gray-200 dark:hover:bg-slate-700 focus:outline-none transition-all"
+                                    title="Bold">
                                     <i data-lucide="bold" class="w-4 h-4"></i>
                                 </button>
                                 <button type="button"
-                                    class="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg hover:bg-white text-gray-800 shadow-sm hover:shadow dark:text-gray-200 dark:hover:bg-slate-700 focus:outline-none">
+                                    class="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg hover:bg-white text-gray-800 shadow-sm hover:shadow dark:text-gray-200 dark:hover:bg-slate-700 focus:outline-none transition-all"
+                                    title="Italic">
                                     <i data-lucide="italic" class="w-4 h-4"></i>
+                                </button>
+                                <button type="button"
+                                    class="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg hover:bg-white text-gray-800 shadow-sm hover:shadow dark:text-gray-200 dark:hover:bg-slate-700 focus:outline-none transition-all"
+                                    title="Underline">
+                                    <i data-lucide="underline" class="w-4 h-4"></i>
+                                </button>
+                                <button type="button"
+                                    class="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg hover:bg-white text-gray-800 shadow-sm hover:shadow dark:text-gray-200 dark:hover:bg-slate-700 focus:outline-none transition-all"
+                                    title="Strike">
+                                    <i data-lucide="strikethrough" class="w-4 h-4"></i>
+                                </button>
+                                <button type="button"
+                                    class="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg hover:bg-white text-gray-800 shadow-sm hover:shadow dark:text-gray-200 dark:hover:bg-slate-700 focus:outline-none transition-all"
+                                    title="Link">
+                                    <i data-lucide="link" class="w-4 h-4"></i>
                                 </button>
                                 <div class="w-px h-6 bg-gray-300 dark:bg-gray-600 mx-1"></div>
                                 <button type="button"
-                                    class="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg hover:bg-white text-gray-800 shadow-sm hover:shadow dark:text-gray-200 dark:hover:bg-slate-700 focus:outline-none">
+                                    class="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg hover:bg-white text-gray-800 shadow-sm hover:shadow dark:text-gray-200 dark:hover:bg-slate-700 focus:outline-none transition-all"
+                                    title="Unordered List">
                                     <i data-lucide="list" class="w-4 h-4"></i>
                                 </button>
                                 <button type="button"
-                                    class="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg hover:bg-white text-gray-800 shadow-sm hover:shadow dark:text-gray-200 dark:hover:bg-slate-700 focus:outline-none">
-                                    <i data-lucide="link" class="w-4 h-4"></i>
+                                    class="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg hover:bg-white text-gray-800 shadow-sm hover:shadow dark:text-gray-200 dark:hover:bg-slate-700 focus:outline-none transition-all"
+                                    title="Ordered List">
+                                    <i data-lucide="list-ordered" class="w-4 h-4"></i>
+                                </button>
+                                <button type="button"
+                                    class="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg hover:bg-white text-gray-800 shadow-sm hover:shadow dark:text-gray-200 dark:hover:bg-slate-700 focus:outline-none transition-all"
+                                    title="Align Left">
+                                    <i data-lucide="align-left" class="w-4 h-4"></i>
+                                </button>
+                                <button type="button"
+                                    class="p-2 inline-flex justify-center items-center gap-x-2 rounded-lg hover:bg-white text-gray-800 shadow-sm hover:shadow dark:text-gray-200 dark:hover:bg-slate-700 focus:outline-none transition-all"
+                                    title="Code">
+                                    <i data-lucide="code" class="w-4 h-4"></i>
                                 </button>
                             </div>
-                            <div class="p-4 h-80 overflow-y-auto" contenteditable="true">
+                            <div class="p-4 h-80 overflow-y-auto bg-white dark:bg-slate-900" contenteditable="true">
                                 <p class="text-gray-800 dark:text-gray-200">Commencez à rédiger ici...</p>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Vidéo (Full Width) -->
+                    <div class="mt-6">
+                        <div
+                            class="bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 dark:bg-slate-900 dark:border-gray-700">
+                            <h3 class="font-semibold text-gray-800 dark:text-white mb-4">Vidéo</h3>
+                            <label for="dropzone-video"
+                                class="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 dark:hover:bg-gray-800 dark:bg-slate-800 dark:border-gray-600 dark:hover:border-gray-500 transition-colors">
+                                <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                    <i data-lucide="video" class="w-8 h-8 mb-3 text-gray-400"></i>
+                                    <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span
+                                            class="font-semibold">Cliquer pour upload</span></p>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400">MP4, WebM (Max 50Mo)</p>
+                                </div>
+                                <input id="dropzone-video" type="file" class="hidden" accept="video/*" />
+                            </label>
+                        </div>
+                    </div>
+
+
 
                 </div>
 
@@ -221,38 +231,62 @@
                                 <input type="checkbox" id="is_featured"
                                     class="relative w-[3.25rem] h-7 bg-gray-100 checked:bg-none checked:bg-blue-600 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 ring-1 ring-transparent focus:border-blue-600 focus:ring-blue-600 ring-offset-white focus:outline-none appearance-none dark:bg-slate-700 dark:checked:bg-blue-600 dark:focus:ring-offset-gray-800 before:inline-block before:w-6 before:h-6 before:bg-white checked:before:bg-blue-200 before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-slate-400 dark:checked:before:bg-blue-200">
                             </div>
-                            <button type="submit"
-                                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                            <button type="button"
+                                class="hidden w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
                                 Enregistrer
                             </button>
                         </div>
                     </div>
 
-                    <!-- Category & Tags -->
                     <div
-                        class="bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 dark:bg-slate-900 dark:border-gray-700">
+                        class="bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 dark:bg-slate-900 dark:border-gray-700 min-h-[460px]">
                         <h3 class="font-semibold text-gray-800 dark:text-white mb-4">Taxonomie</h3>
-                        <div class="space-y-4">
-                            <div>
+                        <div class="space-y-6">
+
+                            <!-- Categories Preline Select -->
+                            <div class="relative">
                                 <label class="block text-sm font-medium mb-2 dark:text-white">Catégorie</label>
-                                <select
-                                    class="py-3 px-4 pe-9 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
-                                    <option selected>Sélectionner...</option>
-                                    <option>Backend / Laravel</option>
-                                    <option>Mobile / Android</option>
-                                    <option>Frontend</option>
+                                <select multiple="" data-hs-select='{
+                                    "placeholder": "Sélectionner...",
+                                    "dropdownClasses": "mt-2 z-50 w-full max-h-72 p-1 space-y-0.5 bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-900 dark:border-neutral-700",
+                                    "optionClasses": "py-2 px-4 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-hidden focus:bg-gray-100 hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800",
+                                    "mode": "tags",
+                                    "wrapperClasses": "relative ps-0.5 pe-9 min-h-[46px] flex items-center flex-wrap text-nowrap w-full border border-gray-200 rounded-lg text-start text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400",
+                                    "tagsItemTemplate": "<div class=\"flex flex-nowrap items-center relative z-10 bg-white border border-gray-200 rounded-full p-1 m-1 dark:bg-neutral-900 dark:border-neutral-700 \"><div class=\"whitespace-nowrap text-gray-800 dark:text-neutral-200 px-2\" data-title></div><div class=\"inline-flex shrink-0 justify-center items-center size-5 ms-2 rounded-full text-gray-800 bg-gray-200 hover:bg-gray-300 focus:outline-hidden focus:ring-2 focus:ring-gray-400 text-sm dark:bg-neutral-700/50 dark:hover:bg-neutral-700 dark:text-neutral-400 cursor-pointer\" data-remove><svg class=\"shrink-0 size-3\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/></svg></div></div>",
+                                    "tagsInputId": "hs-tags-input",
+                                    "tagsInputClasses": "py-2 px-2 min-w-[50px] border-transparent focus:ring-0 text-sm outline-none bg-transparent dark:bg-transparent dark:text-neutral-200 order-1",
+                                    "optionTemplate": "<div class=\"flex items-center\"><div><div class=\"text-sm font-semibold text-gray-800 dark:text-neutral-200 \" data-title></div></div><div class=\"ms-auto\"><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-4 text-blue-600\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z\"/></svg></span></div></div>",
+                                    "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg class=\"shrink-0 size-3.5 text-gray-500 dark:text-neutral-500 \" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m7 15 5 5 5-5\"/><path d=\"m7 9 5-5 5 5\"/></svg></div>"
+                                }' class="hidden">
+                                    <option value="">Choisir...</option>
+                                    <option value="1">Backend / Laravel</option>
+                                    <option value="2">Frontend / React</option>
+                                    <option value="3">Mobile / Flutter</option>
+                                    <option value="4">DevOps / Docker</option>
+                                    <option value="5">Design / UI/UX</option>
                                 </select>
                             </div>
+
+                            <!-- Tags Input -->
                             <div>
                                 <label class="block text-sm font-medium mb-2 dark:text-white">Tags</label>
-                                <input type="text"
-                                    class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                                    placeholder="Ex: php, tuto (séparés par virgule)">
+                                <div class="relative">
+                                    <input type="text" id="tags-input"
+                                        class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                                        placeholder="#Tag1, #Tag2...">
+
+                                    <!-- Tag Suggestions Dropdown -->
+                                    <div id="tags-dropdown"
+                                        class="hidden absolute left-0 right-0 top-full mt-1 z-50 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-slate-900 dark:border-gray-700 max-h-40 overflow-y-auto">
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-500 mt-2">Séparez les tags par des virgules.</p>
                             </div>
+
                         </div>
                     </div>
 
-                    <!-- Image -->
+                    <!-- Image de couverture (Sidebar) -->
                     <div
                         class="bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 dark:bg-slate-900 dark:border-gray-700">
                         <h3 class="font-semibold text-gray-800 dark:text-white mb-4">Image de couverture</h3>
@@ -267,7 +301,18 @@
                         </label>
                     </div>
 
+
+
                 </div>
+            </div>
+
+
+            <!-- Bottom Action Button (Footer Right) -->
+            <div class="mt-6 flex justify-end">
+                <button type="submit"
+                    class="py-3 px-6 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                    Ajouter
+                </button>
             </div>
         </form>
 
@@ -277,21 +322,103 @@
     <script>
         lucide.createIcons();
         document.addEventListener('DOMContentLoaded', () => {
-            const dropdownToggle = document.getElementById('hs-dropdown-with-header');
-            if (dropdownToggle) {
-                const dropdownMenu = dropdownToggle.nextElementSibling;
-                dropdownToggle.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    dropdownMenu.classList.toggle('hidden');
-                    dropdownMenu.classList.toggle('opacity-0');
-                });
-                document.addEventListener('click', (e) => {
-                    if (!dropdownToggle.contains(e.target)) {
-                        dropdownMenu.classList.add('hidden');
-                        dropdownMenu.classList.add('opacity-0');
-                    }
-                });
+
+
+            // === Tags Input (Comma Separated) ===
+            const tagsInput = document.getElementById('tags-input');
+            const tagsDropdown = document.getElementById('tags-dropdown');
+
+            // Simulation of existing tags
+            const existingTags = ['Laravel', 'PHP', 'JavaScript', 'Tailwind', 'Preline', 'Design', 'Vue.js', 'React', 'Angular', 'Python'];
+
+            // Get current tags from input string (handling #)
+            function getCurrentTags() {
+                return tagsInput.value.split(',').map(t => t.trim().replace(/^#/, '')).filter(t => t);
             }
+
+            // Get the partial tag currently being typed (after last comma)
+            function getCurrentPartial() {
+                const val = tagsInput.value;
+                const lastCommaIndex = val.lastIndexOf(',');
+                return val.substring(lastCommaIndex + 1); // Keep whitespace to respect user typing
+            }
+
+            // Add Tag (with #)
+            function selectTag(tag) {
+                const val = tagsInput.value;
+                const lastCommaIndex = val.lastIndexOf(',');
+                let newVal = '';
+                const tagWithHash = '#' + tag;
+
+                if (lastCommaIndex === -1) {
+                    newVal = tagWithHash + ', ';
+                } else {
+                    newVal = val.substring(0, lastCommaIndex + 1) + ' ' + tagWithHash + ', ';
+                }
+                tagsInput.value = newVal;
+                tagsInput.focus(); // Keep focus
+                closeTagsDropdown();
+            }
+
+            // Show Suggestions
+            function showSuggestions() {
+                tagsDropdown.innerHTML = '';
+                // Clean partial input (remove # for searching)
+                const partial = getCurrentPartial().trim().replace(/^#/, '').toLowerCase();
+                const currentTags = getCurrentTags().map(t => t.toLowerCase());
+
+                // Filter: match partial AND not already in list
+                const matches = existingTags.filter(t => {
+                    const lowerT = t.toLowerCase();
+                    const isAlreadySelected = currentTags.includes(lowerT);
+                    // If partial is empty, show all available tags, otherwise filter
+                    const matchesPartial = partial === '' || lowerT.includes(partial);
+
+                    return !isAlreadySelected && matchesPartial;
+                });
+
+                if (matches.length > 0) {
+                    tagsDropdown.classList.remove('hidden');
+                    matches.forEach(tag => {
+                        const div = document.createElement('div');
+                        div.className = "px-3 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-slate-700 text-sm text-gray-800 dark:text-gray-200";
+                        div.textContent = '#' + tag; // Display with #
+                        div.addEventListener('click', () => selectTag(tag));
+                        tagsDropdown.appendChild(div);
+                    });
+                } else {
+                    closeTagsDropdown();
+                }
+            }
+
+            function closeTagsDropdown() {
+                tagsDropdown.classList.add('hidden');
+            }
+
+            // Listeners
+            tagsInput.addEventListener('input', () => {
+                showSuggestions();
+            });
+
+            // Show suggestions on focus even if empty
+            tagsInput.addEventListener('focus', () => {
+                showSuggestions();
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!tagsInput.contains(e.target) && !tagsDropdown.contains(e.target)) {
+                    closeTagsDropdown();
+                }
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!tagsContainer.contains(e.target) && !tagsDropdown.contains(e.target)) {
+                    closeTagsDropdown();
+                }
+            });
+
         });
     </script>
 </body>
