@@ -200,9 +200,9 @@
           <!-- Categories Custom Dropdown -->
           <div id="categoriesDropdown" class="relative inline-block text-left">
             <button type="button"
-              class="inline-flex justify-between items-center w-full sm:w-56 py-2 px-4 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-slate-800">
+              class="inline-flex items-center gap-2 w-full sm:w-56 py-2 px-4 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-slate-800">
               <span class="truncate">Toutes les catégories</span>
-              <i data-lucide="chevron-down" class="w-4 h-4 text-gray-500"></i>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-gray-500 ml-auto"></i>
             </button>
 
             <div
@@ -305,9 +305,9 @@
           <!-- Status Custom Dropdown -->
           <div id="statusDropdown" class="relative inline-block text-left">
             <button type="button"
-              class="inline-flex justify-between items-center w-full sm:w-56 py-2 px-4 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-slate-800">
+              class="inline-flex items-center gap-2 w-full sm:w-56 py-2 px-4 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-slate-800">
               <span class="truncate">Tous les statuts</span>
-              <i data-lucide="chevron-down" class="w-4 h-4 text-gray-500"></i>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-gray-500 ml-auto"></i>
             </button>
 
             <div
@@ -520,7 +520,24 @@
 
               // Update Button Text
               const text = this.textContent.trim();
-              dropdownButton.querySelector('span:not(.sr-only)').textContent = text;
+              const span = dropdownButton.querySelector('span:not(.sr-only)');
+              span.textContent = text;
+
+              // Update Button Icon
+              const existingIcon = dropdownButton.querySelector('.dynamic-icon');
+              if (existingIcon) existingIcon.remove();
+
+              // Find icon in selection (SVG or Lucide i)
+              const iconSource = this.querySelector('svg, i[data-lucide]');
+              if (iconSource) {
+                const newIcon = iconSource.cloneNode(true);
+                // Add classes for size and identification
+                newIcon.classList.add('dynamic-icon', 'w-4', 'h-4');
+                // Remove existing positioning classes that might conflict (optional, but good practice)
+                newIcon.classList.remove('ml-auto');
+
+                dropdownButton.insertBefore(newIcon, span);
+              }
 
               // Manage Active/Inactive Classes
               const activeClasses = ['bg-blue-50', 'text-blue-600', 'dark:bg-blue-900/30', 'dark:text-blue-400'];
@@ -538,10 +555,17 @@
 
               // Close Menu and Reset Icon
               dropdownMenu.classList.add('hidden');
-              const chevron = dropdownButton.querySelector('i[data-lucide]');
+              const chevron = dropdownButton.querySelector('i[data-lucide="chevron-up"]'); // Check specifically for chevron-up to reset it
               if (chevron) {
                 chevron.setAttribute('data-lucide', 'chevron-down');
                 lucide.createIcons({ icons: chevron });
+              } else {
+                // Fallback if chevron-down is already there but we want to be sure (though toggle handles it, clicking item forces close)
+                const anyChevron = dropdownButton.querySelector('i[data-lucide*="chevron"]');
+                if (anyChevron) {
+                  anyChevron.setAttribute('data-lucide', 'chevron-down');
+                  lucide.createIcons({ icons: anyChevron });
+                }
               }
             });
           });
