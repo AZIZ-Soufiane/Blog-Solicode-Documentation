@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoliCode Blog - Alert Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 600: '#2563eb', 700: '#1d4ed8' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white p-10 flex justify-center dark:bg-slate-900">
+
+    <!-- Alert Component Start -->
+    <div class="max-w-md w-full">
+        <div class="bg-blue-50 border border-blue-200 text-sm text-blue-800 rounded-lg p-4 dark:bg-blue-800/10 dark:border-blue-900 dark:text-blue-500"
+            role="alert">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <svg class="flex-shrink-0 h-4 w-4 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v-4"></path>
+                        <path d="M12 8h.01"></path>
+                    </svg>
+                </div>
+                <div class="ms-4">
+                    <h3 class="text-sm font-semibold">
+                        Info
+                    </h3>
+                    <div class="mt-2 text-sm text-blue-700 dark:text-blue-400">
+                        Ceci est un message d'information ou de succès.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Alert Component End -->
+
+</body>
+
+</html>
