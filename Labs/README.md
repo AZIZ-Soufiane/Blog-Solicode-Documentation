@@ -23,4 +23,7 @@ Labs/
     ├── README.md
     ├── choix_labs.md
     └── lab Github.md
+    └── lab_AJAX.md
+    └── lab_Vite.md
+    └── lab_upload_files_et_medias.md
 ```

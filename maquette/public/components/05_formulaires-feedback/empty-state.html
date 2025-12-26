@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoliCode Blog - Empty State Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 600: '#2563eb', 700: '#1d4ed8' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white p-10 flex justify-center items-center h-screen dark:bg-slate-900">
+
+    <!-- Empty State Component Start -->
+    <div
+        class="max-w-sm w-full min-h-[400px] flex flex-col justify-center mx-auto px-6 py-4 border border-dashed border-gray-200 rounded-xl dark:border-gray-700">
+        <div class="flex justify-center items-center w-[46px] h-[46px] bg-gray-100 rounded-lg dark:bg-gray-800 mx-auto">
+            <svg class="flex-shrink-0 w-6 h-6 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+        </div>
+
+        <h2 class="mt-5 font-semibold text-gray-800 dark:text-white text-center">
+            Aucun résultat trouvé
+        </h2>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 text-center">
+            Nous n'avons trouvé aucun article correspondant à votre recherche. Essayez d'autres mots-clés.
+        </p>
+
+        <div class="mt-5 grid gap-2">
+            <a class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-lg border border-transparent font-medium bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800"
+                href="index.html">
+                Retour à l'accueil
+            </a>
+        </div>
+    </div>
+    <!-- Empty State Component End -->
+
+</body>
+
+</html>
