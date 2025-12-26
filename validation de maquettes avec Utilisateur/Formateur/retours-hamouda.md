@@ -1,4 +1,4 @@
-## Compte rendu – Validation des maquettes UI
+## Compte rendu –- Validation des maquettes UI
 ## Formateur : Hamouda
 
 ## Contexte
