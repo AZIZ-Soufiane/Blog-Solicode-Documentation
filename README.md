@@ -56,6 +56,11 @@ blog-solicode-documentation/
 ├── besoin/
 │   ├── README.md
 │   └── stack.md
+├── empathie/
+│   ├── Ayoub-Faqihi.md
+│   └── Ismail-Founti.md
+│   └── Safa_El_Gharras.md
+│   └── Yassir_El_Mesbahi.md
 ├── Fonctionnalités et cas d'utilisation/
 │   ├── README.analyse.md
 │   ├── complet/
