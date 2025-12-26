@@ -1,6 +1,7 @@
 # 🔐 Spécifications : Authentification
 
 > **Fichiers :** `login.html` & `register.html`
+> **Statut :** [PLANNED] Spécifications pour la création des pages.
 > **Rôle :** Sécuriser l'accès aux fonctionnalités Membre et Admin.
 
 ## 1. Page de Connexion (`login.html`)

@@ -6,8 +6,8 @@
 ## 1. Structure de la Page
 
 ### A. Recherche & Filtres -> `components/recherche-filtres/`
-*   **Barre de Recherche (`search-bar.html`) :** Input avec icône loupe.
-*   **Filtre Catégories (`filters.html`) :** Dropdown premium avec icônes Lucide pour chaque catégorie.
+*   **Barre de Recherche (`search-bar.html`) :** Input premium avec icône loupe intégré à un dropdown de catégories.
+*   **Filtre Catégories (`filters.html`) :** Dropdown de sélection rapide avec icônes Lucide.
 
 ### B. Grille de Résultats
 *   **Layout :** Grid 3 cols.
@@ -19,4 +19,4 @@
 ## 2. Règles d'Interaction
 *   **Filtres :** Au clic sur un badge, la grille se met à jour (simulation ou rechargement).
 *   **Input :** La recherche se lance à `Enter` ou au clic sur l'icône loupe (si bouton présent).
-*   **Pagination :** (Non visible sur la maquette actuelle, mais implicite pour le dev futures).
+*   **Pagination :** Navigation numérotée avec états actif/inactif.

@@ -14,7 +14,7 @@
 *   **Comment Section :** Formulaire de dépôt + Liste des commentaires (avec réponses).
 
 ### B. Cards "À la une" -> `components/contenu-cards/card-article.html`
-*   Utilisées pour la section "Vous aimerez aussi".
+*   (Optionnel) Utilisées pour une section "Vous aimerez aussi" en bas de page.
 
 ## 2. Règles d'Interaction
 *   **Images :** Doivent être responsive et garder le ratio.

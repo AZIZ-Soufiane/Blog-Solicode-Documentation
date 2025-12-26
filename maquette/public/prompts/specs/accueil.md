@@ -14,16 +14,18 @@
     *   `S'inscrire` (Bouton CTA, vers `register.html`).
 
 ### B. Hero Section -> `components/contenu-cards/hero.html`
-*   **Titre :** H1 impactant avec span coloré ("Coder").
-*   **Sous-titre :** Description courte de la proposition de valeur.
+*   **Titre :** H1 impactant avec span coloré ("Solicode").
+*   **Sous-titre :** Description de la plateforme de ressources.
 *   **Composants :**
-    *   **Barre de Recherche rapide :** Input text + Bouton submit (icon loupe). Redirige vers `search.html`.
-    *   **Éléments décoratifs :** SVG (Vagues/Courbes) en background.
-    *   **CTA Secondaire :** "Explorer les projets étudiants" (Lien `search.html`).
+    *   **Badge :** Label "Formation & Développement".
+    *   **CTA Principal :** "Explorer" (Lien `search.html`).
+    *   **CTA Secondaire :** "En savoir plus" (Lien ancre `#about`).
+    *   **Illustration :** Image `banner2.jpg` à droite (Desktop).
 
-### C. Section "À la une" (Featured)
-*   **En-tête :** Titre H2 "Articles à la une" + Lien "Voir tout" (vers `search.html`).
+### C. Section "Articles Récents"
+*   **En-tête :** Titre H2 "Articles Récents".
 *   **Grille :** 3 colonnes (Desktop) / 1 colonne (Mobile).
+*   **Bouton :** "Voir tous les articles" (Lien `search.html`).
 *   **Cartes Article (Composant) :** -> `components/contenu-cards/card-article.html`
     *   **Image :** Cover (Height ~160px).
     *   **Badge (Sur l'image) :** Catégorie principale (ex: Laravel).

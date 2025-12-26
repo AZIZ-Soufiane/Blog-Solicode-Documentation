@@ -26,9 +26,9 @@ Cœur de l'expérience lecteur.
     *   **Related Posts :** "Vous aimerez aussi".
 
 ### 🔐 Authentification
-Pages d'accès membre.
-*   **Login (`./login.html`) :** Formulaire de connexion sécurisé.
-*   **Register (`./register.html`) :** Formulaire d'inscription simple.
+Pages d'accès membre (Design prévu, intégration en cours).
+*   **Login (`./login.html`) :** [TODO] Formulaire de connexion.
+*   **Register (`./register.html`) :** [TODO] Formulaire d'inscription.
 
 # 📂 Architecture des Dossiers
 
@@ -42,19 +42,19 @@ maquettes-public/
 ├── index.html              # 🏠 Page d'Accueil
 ├── search.html             # 🔍 Page Recherche / Liste
 ├── article.html            # 📖 Page Détail Article
-├── login.html              # 🔐 Connexion
-├── register.html           # 📝 Inscription
+├── login.html              # 🔐 [TODO] Connexion
+├── register.html           # 📝 [TODO] Inscription
 │
 ├── components/             # 🧱 Briques Réutilisables
-│   ├── contenu-cards/      # Cartes et Hero
+│   ├── contenu-cards/      # Contenus et Blocs
+│   │   ├── article-detail.html
 │   │   ├── card-article.html
 │   │   ├── hero.html
-│   │   ├── article-detail.html
 │   │   └── statistics.html
-│   ├── navigation/         # Navbar et Footer
-│   │   ├── navbar.html
-│   │   └── footer.html
-│   └── recherche-filtres/   # Filtres et Recherche
+│   ├── navigation/         # Navigation site
+│   │   ├── footer.html
+│   │   └── navbar.html
+│   └── recherche-filtres/   # Recherche et Filtres UI
 │       ├── filters.html
 │       ├── pagination.html
 │       └── search-bar.html
