@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" class="h-full">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoliCode Blog - Inscription</title>
+    <title>SoliCode Register Form</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,6 +22,7 @@
             }
         }
     </script>
+    <!-- Google Fonts Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -29,29 +31,18 @@
     </style>
 </head>
 
-<body class="bg-gray-100 flex items-center justify-center h-full py-16 dark:bg-slate-900">
+<body class="bg-gray-50 flex justify-center items-center min-h-screen dark:bg-slate-900 p-4">
 
+    <!-- Register Form Component -->
     <div
-        class="w-full max-w-md bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        class="w-full max-w-md bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-slate-800 dark:border-gray-700">
         <div class="p-4 sm:p-7">
             <div class="text-center">
-                <a class="flex justify-center items-center gap-x-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white group mb-6"
-                    href="index.html">
-                    <div
-                        class="flex justify-center items-center w-8 h-8 rounded-lg bg-blue-600 text-white shadow-lg shadow-blue-600/20">
-                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="2.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
-                        </svg>
-                    </div>
-                    <span>Soli<span class="text-blue-600">Code</span></span>
-                </a>
                 <h1 class="block text-2xl font-bold text-gray-800 dark:text-white">Créer un compte</h1>
                 <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
                     Déjà membre ?
                     <a class="text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500"
-                        href="login.html">
+                        href="login-form.html">
                         Se connecter
                     </a>
                 </p>
@@ -74,7 +65,7 @@
                     Ou</div>
 
                 <!-- Form -->
-                <form action="index.html">
+                <form>
                     <div class="grid gap-y-4">
                         <!-- Full Name Input -->
                         <div>
@@ -161,6 +152,7 @@
             </div>
         </div>
     </div>
+    <!-- End Register Form Component -->
 
 </body>
 

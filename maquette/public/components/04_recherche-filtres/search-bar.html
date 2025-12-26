@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoliCode Blog - Search Bar Component</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 600: '#2563eb' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 p-10 flex justify-center items-center min-h-screen">
+
+    <!-- Search Bar Component Start -->
+    <div class="w-full max-w-2xl">
+        <label for="search-input" class="sr-only">Rechercher</label>
+        <div class="relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
+                <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                </svg>
+            </div>
+            <input type="text" id="search-input"
+                class="py-3 px-4 ps-11 block w-full bg-white border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none shadow-sm dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                placeholder="Rechercher un article, un tutoriel..." value="">
+
+            <!-- Optional: Clear Button (Hidden by default, visible when typing) -->
+            <div class="absolute inset-y-0 end-0 flex items-center pe-4">
+                <button type="button" class="text-gray-400 hover:text-gray-600">
+                    <span class="sr-only">Effacer</span>
+                    <!-- Close Icon -->
+                    <!-- <svg class="w-4 h-4" ...></svg> -->
+                </button>
+            </div>
+        </div>
+
+        <!-- Autocomplete Suggestions (Demo) -->
+        <div class="mt-2 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hidden">
+            <!-- Retirer 'hidden' pour voir -->
+            <ul class="flex flex-col">
+                <li
+                    class="inline-flex items-center gap-x-2 py-3 px-4 text-sm border-b border-gray-200 text-gray-800 hover:bg-gray-50 cursor-pointer">
+                    <span class="font-bold text-primary-600">Lar</span>avel 11 : Les nouveautés
+                </li>
+                <li
+                    class="inline-flex items-center gap-x-2 py-3 px-4 text-sm text-gray-800 hover:bg-gray-50 cursor-pointer">
+                    Installation de <span class="font-bold text-primary-600">Lar</span>avel Sail
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Search Bar Component End -->
+
+</body>
+
+</html>
