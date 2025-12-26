@@ -48,16 +48,67 @@ Ce dépôt contient principalement :
 
 # Structure du dépôt Blog-Solicode-Documentation
 
-
 ```
 blog-solicode-documentation/
-├── slides/                     # Documents et supports pour les présentations
-├── besoin/                      # Documents relatifs aux besoins du projet (Travail à faire)
-├── maquette/                    # Dossier de maquettes (Création de maquette)
-├── validation-des-maquettes/    # Retours et validations des maquettes avec utilisateurs
-├── README.md                    # Fichier principal de documentation
-├── liste-des-utilisateurs.md    # Liste des utilisateurs du projet
-
+├── README.md
+├── .vscode/
+│   ├── settings.json
+├── besoin/
+│   ├── README.md
+│   └── stack.md
+├── Fonctionnalités et cas d'utilisation/
+│   ├── README.analyse.md
+│   ├── complet/
+│   │   ├── README.md
+│   │   ├── uc-admin.puml
+│   │   ├── uc-public-complet-lecture.puml
+│   │   └── uc-public-complet-membre.puml
+│   └── mvp/
+│       ├── README.md
+│       ├── uc-mvp-admin.puml
+│       ├── uc-mvp-public-membre.puml
+│       └── uc-mvp-public-visiteur.puml
+├── Labs/
+│   ├── README.md
+│   ├── choix_labs.md
+│   ├── lab Github.md
+│   ├── lab_AJAX.md
+│   ├── lab_upload_files_et_medias.md
+│   ├── lab_Vite.md
+│   └── PHP_Naming_Conventions.md
+├── maquette/
+│   ├── README.md
+│   ├── admin/
+│   │   ├── dashboard-admin.html
+│   │   ├── dashboard-auteur.html
+│   │   ├── index.html
+│   │   └── articles/
+│   │       ├── form.html
+│   │       └── index.html
+│   └── public/
+│       ├── article.html
+│       ├── index.html
+│       ├── login.html
+│       ├── register.html
+│       └── search.html
+├── validation de maquettes avec Utilisateur/
+│   ├── README.md
+│   ├── retours-admin-hamouda.md
+│   ├── retours-encadrant.md
+│   ├── retours-formateur-fatine.md
+│   ├── retours-formateur-soklabi.md
+│   ├── retours-formateur-youssef.md
+│   ├── retours-jalil.md
+│   ├── retours-utilisateurs-apprenants.md
+│   └── retours-utilisateurs-apprenants2.md
+├── problèmes_bloquantes/
+│   └── problèmes-bloquantes.md
+├── Slides/
+│   ├── build.ps1
+│   ├── sprint1.html
+│   ├── sprint1.md
+│   └── images/
+├── fichier-de-points.md
 ```
 
 ## 🐞 Règles de rédaction des issues
