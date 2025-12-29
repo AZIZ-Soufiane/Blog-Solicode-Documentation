@@ -66,8 +66,7 @@ MALLOULI Abdelhay
 OUALLOU Mohamed  
 AZIZ Soufiane  
 AKAJOU Salma  
-BENTALEB Mehdi  
-HADDAD Yasmine  
+BENTALEB Mehdi    
 
 **Encadré par :**  
 M. ESSARRAJ Fouad
