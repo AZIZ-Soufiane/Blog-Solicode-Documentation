@@ -48,7 +48,7 @@ Essarraj Fouad
 
 ---
 
-# Phase 1: Planning 📋
+# Phase 1: Planning 📋*
 
 * **Requirements:** Define every feature.
 * **System Design:** Build the technical roadmap.
