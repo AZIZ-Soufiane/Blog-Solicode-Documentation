@@ -67,7 +67,6 @@ OUALLOU Mohamed
 AZIZ Soufiane  
 AKAJOU Salma  
 BENTALEB Mehdi  
-EL ACHIRI Aymane  
 HADDAD Yasmine  
 
 **Encadré par :**  
@@ -90,14 +89,13 @@ Une plateforme de blog dynamique, sécurisée et scalable, accompagnée d’une 
 
 La plateforme se compose de 7 sprints interconnectés :
 
-- Sprint 1 :
-- Sprint 2 :
-- Sprint 3 :
-- Sprint 4 :
-- Sprint 5 :
-- Sprint 6 :
-- Sprint 7 :
-
+- Sprint 1 : Visiteur & Découverte
+- Sprint 2 : Publication (Back-Office sans Auth)
+- Sprint 3 : Authentification & Rôles
+- Sprint 4 : Commentaires & Communauté
+- Sprint 5 : API REST
+- Sprint 6 : Application Mobile
+- Sprint 7 : Fonctionnalités additionnelles (Ajout aux favoris, Partage sur réseaux sociaux)
 <br>
 <br>
 
