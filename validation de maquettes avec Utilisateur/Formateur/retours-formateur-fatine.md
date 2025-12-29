@@ -1,4 +1,6 @@
 ## Compte rendu – Améliorations apportées 
+## Compte rendu : 28/11/2025
+
 
 ## 1. Partie Administration – Gestion des Articles
 

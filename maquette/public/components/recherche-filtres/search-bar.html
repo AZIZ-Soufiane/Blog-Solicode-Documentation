@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoliCode Blog - Search Bar Component</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 600: '#2563eb' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 p-10 flex justify-center items-center min-h-screen">
+
+    <!-- Search Input -->
+    <div class="relative group flex-grow">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-400 group-focus-within:text-blue-600 transition-colors"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+            </svg>
+        </div>
+        <input id="search-input" type="text" name="q" value=""
+            class="h-12 py-3 px-4 ps-10 block w-full bg-white border-gray-200 shadow-sm rounded-xl text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:placeholder-gray-500 dark:focus:ring-blue-600 transition-all"
+            placeholder="Rechercher un sujet...">
+
+        <div class="absolute inset-y-0 end-0 flex items-center pe-2">
+            <a href="search.html" class="p-2 text-gray-400 hover:text-red-500 transition-colors" title="Réinitialiser">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

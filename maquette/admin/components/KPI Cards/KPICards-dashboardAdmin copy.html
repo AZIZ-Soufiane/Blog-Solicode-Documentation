@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoliCode Blog - Dashboard Admin</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: { 600: '#2563eb', 700: '#1d4ed8' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Fix for Preline Accordion/Dropdown with Tailwind CDN */
+        .hs-accordion.hs-accordion-active .hs-accordion-content {
+            display: block !important;
+        }
+
+        .hs-dropdown.hs-dropdown-open .hs-dropdown-menu {
+            display: block !important;
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+<body>
+        <!-- KPI Cards -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 p-10">
+            <!-- Articles -->
+            <div
+                class="group flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 dark:bg-slate-900 dark:border-gray-700">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-wide text-gray-400 dark:text-gray-500">Articles
+                        </h3>
+                        <p class="mt-1 text-3xl font-extrabold text-gray-800 dark:text-gray-200">124</p>
+                    </div>
+                    <div
+                        class="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl shadow-lg shadow-blue-500/30 text-white">
+                        <i data-lucide="file-text" class="w-6 h-6"></i>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center text-sm">
+                    <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Total publiés</span>
+                </div>
+            </div>
+
+            <!-- Vues -->
+            <div
+                class="group flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 dark:bg-slate-900 dark:border-gray-700">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-wide text-gray-400 dark:text-gray-500">Vues
+                            Totales</h3>
+                        <p class="mt-1 text-3xl font-extrabold text-gray-800 dark:text-gray-200">54.2k</p>
+                    </div>
+                    <div
+                        class="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl shadow-lg shadow-emerald-500/30 text-white">
+                        <i data-lucide="eye" class="w-6 h-6"></i>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center gap-x-1.5">
+                    <span
+                        class="inline-flex items-center gap-x-1 py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-800/30 dark:text-emerald-500 text-xs font-bold">
+                        <i data-lucide="trending-up" class="w-3 h-3"></i> +12%
+                    </span>
+                    <span class="text-xs text-gray-400">ce mois-ci</span>
+                </div>
+            </div>
+
+            <!-- Utilisateurs -->
+            <div
+                class="group flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 dark:bg-slate-900 dark:border-gray-700">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-wide text-gray-400 dark:text-gray-500">
+                            Utilisateurs</h3>
+                        <p class="mt-1 text-3xl font-extrabold text-gray-800 dark:text-gray-200">8</p>
+                    </div>
+                    <div
+                        class="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-400 to-fuchsia-500 rounded-2xl shadow-lg shadow-purple-500/30 text-white">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center text-sm">
+                    <span
+                        class="inline-flex items-center gap-x-1 py-0.5 px-2 rounded-full bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white text-xs font-medium">
+                        2 Admins
+                    </span>
+                    <span class="ml-2 text-xs text-gray-400">6 Auteurs</span>
+                </div>
+            </div>
+
+            <!-- Commentaires -->
+            <div
+                class="group flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 dark:bg-slate-900 dark:border-gray-700">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-wide text-gray-400 dark:text-gray-500">
+                            Commentaires</h3>
+                        <p class="mt-1 text-3xl font-extrabold text-gray-800 dark:text-gray-200">312</p>
+                    </div>
+                    <div
+                        class="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl shadow-lg shadow-orange-500/30 text-white">
+                        <i data-lucide="message-square" class="w-6 h-6"></i>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center gap-x-1.5">
+                    <span
+                        class="inline-flex items-center gap-x-1 py-0.5 px-2 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-800/30 dark:text-orange-500 text-xs font-bold">
+                        2 nouveaux
+                    </span>
+                </div>
+            </div>
+        </div>
+ 
+     
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+    <script>
+        lucide.createIcons();
+        // Dropdown Logic (Inline for simplicity)
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdownToggle = document.getElementById('hs-dropdown-with-header');
+            if (dropdownToggle) {
+                const dropdownMenu = dropdownToggle.nextElementSibling;
+                dropdownToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    dropdownMenu.classList.toggle('hidden');
+                    dropdownMenu.classList.toggle('opacity-0');
+                });
+                document.addEventListener('click', (e) => {
+                    if (!dropdownToggle.contains(e.target)) {
+                        dropdownMenu.classList.add('hidden');
+                        dropdownMenu.classList.add('opacity-0');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
