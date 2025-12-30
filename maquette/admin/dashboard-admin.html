@@ -66,49 +66,9 @@
                     </a>
                 </li>
 
-                <!-- Spacer -->
-                <li class="my-4 border-t border-gray-100 dark:border-gray-800"></li>
 
-                <!-- Group 2: Content -->
-                <li class="mb-2 px-3 text-[10px] uppercase tracking-widest text-gray-400 font-bold font-heading">Contenu
-                </li>
+               
 
-                <li>
-                    <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
-                        href="articles/index.html">
-                        <i data-lucide="file-text" class="w-[18px] h-[18px]"></i>
-                        Articles
-                    </a>
-                </li>
-                <li>
-                    <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
-                        href="categories/index.html">
-                        <i data-lucide="layers" class="w-[18px] h-[18px]"></i>
-                        Catégories
-                    </a>
-                </li>
-                <li>
-                    <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
-                        href="tags/index.html">
-                        <i data-lucide="tag" class="w-[18px] h-[18px]"></i>
-                        Tags
-                    </a>
-                </li>
-
-                <!-- Spacer -->
-                <li class="my-4 border-t border-gray-100 dark:border-gray-800"></li>
-
-                <!-- Group 3: Admin -->
-                <li class="mb-2 px-3 text-[10px] uppercase tracking-widest text-gray-400 font-bold font-heading">Système
-                </li>
-
-                <li>
-                    <a class="flex items-center gap-x-3 py-2.5 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-200"
-                        href="utilisateurs/index.html">
-                        <i data-lucide="users" class="w-[18px] h-[18px]"></i>
-                        Utilisateurs
-                    </a>
-                </li>
             </ul>
         </nav>
     </div>
@@ -128,43 +88,27 @@
             </div>
 
             <div class="w-full flex items-center justify-end ml-auto sm:justify-between sm:gap-x-3 sm:order-3">
-                <div class="hidden sm:block">
-                    <label for="icon" class="sr-only">Search</label>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none z-20 pl-4">
-                            <i data-lucide="search" class="w-4 h-4 text-gray-400"></i>
-                        </div>
-                        <input type="text" id="icon" name="icon"
-                            class="py-2 pl-11 pr-10 block w-full md:w-80 border-gray-200 rounded-full text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                            placeholder="Rechercher...">
-                    </div>
-                </div>
+                <div class="hidden sm:block"></div> <!-- Empty search for author -->
 
                 <div class="flex flex-row items-center justify-end gap-2">
                     <div class="relative items-center inline-flex" data-hs-dropdown-placement="bottom-right">
                         <button id="hs-dropdown-with-header" type="button"
                             class="hs-dropdown-toggle inline-flex justify-center items-center gap-2 w-[2.375rem] h-[2.375rem] rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-slate-800 dark:focus:ring-slate-700 dark:focus:ring-offset-gray-800">
                             <img class="inline-block h-[2.375rem] w-[2.375rem] rounded-full ring-2 ring-white dark:ring-gray-800"
-                                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                                alt="Image Description">
+                                src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                                alt="Avatar">
                         </button>
-                        <div class="absolute right-0 top-full mt-2 z-50 transition-[opacity,margin] duration opacity-0 hidden min-w-[15rem] bg-white shadow-md rounded-lg p-2 dark:bg-gray-800 dark:border dark:border-gray-700"
-                            aria-labelledby="hs-dropdown-with-header">
+                        <div
+                            class="absolute right-0 top-full mt-2 z-50 transition-[opacity,margin] duration opacity-0 hidden min-w-[15rem] bg-white shadow-md rounded-lg p-2 dark:bg-gray-800 dark:border dark:border-gray-700">
                             <div class="py-3 px-5 -m-2 bg-gray-100 rounded-t-lg dark:bg-gray-700">
                                 <p class="text-sm text-gray-500 dark:text-gray-400">Connecté en tant que</p>
-                                <p class="text-sm font-medium text-gray-800 dark:text-gray-300">admin@solicode.co</p>
+                                <p class="text-sm font-medium text-gray-800 dark:text-gray-300">sarah@auteur.com</p>
                             </div>
                             <div class="mt-2 py-2 first:pt-0 last:pb-0">
-                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                                    href="#">
-                                    <i data-lucide="user" class="w-4 h-4"></i>
-                                    Mon Profil
-                                </a>
-                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-red-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-400"
-                                    href="index.html">
-                                    <i data-lucide="log-out" class="w-4 h-4"></i>
-                                    Se déconnecter
-                                </a>
+                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100"
+                                    href="#">Mon Profil</a>
+                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-red-600 hover:bg-gray-100"
+                                    href="index.html">Se déconnecter</a>
                             </div>
                         </div>
                     </div>
@@ -182,93 +126,106 @@
         </div>
 
         <!-- KPI Cards -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
-            <!-- Articles -->
-            <div
-                class="group flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 dark:bg-slate-900 dark:border-gray-700">
-                <div class="flex justify-between items-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+
+            <!-- Card: Articles -->
+            <div class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+
+                <div class="relative flex items-center justify-between">
                     <div>
-                        <h3 class="text-xs font-bold uppercase tracking-wide text-gray-400 dark:text-gray-500">Articles
+                        <p class="text-xs font-medium uppercase tracking-wide text-gray-500">
+                            Articles Publiés
+                        </p>
+                        <h3 id="published-articles" class="mt-2 text-3xl font-bold text-gray-900">
+                            320
                         </h3>
-                        <p class="mt-1 text-3xl font-extrabold text-gray-800 dark:text-gray-200">124</p>
                     </div>
-                    <div
-                        class="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl shadow-lg shadow-blue-500/30 text-white">
-                        <i data-lucide="file-text" class="w-6 h-6"></i>
+
+                    <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-blue-600/10 text-blue-600">
+                        <i data-lucide="newspaper" class="w-6 h-6"></i>
                     </div>
                 </div>
-                <div class="mt-4 flex items-center text-sm">
-                    <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Total publiés</span>
+
+                <div class="relative mt-4 flex items-center gap-2">
+                    <span class="text-xs text-gray-400">Total sur la plateforme</span>
                 </div>
             </div>
 
-            <!-- Vues -->
-            <div
-                class="group flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 dark:bg-slate-900 dark:border-gray-700">
-                <div class="flex justify-between items-center">
+            <!-- Card: Views -->
+            <div class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+
+                <div class="relative flex items-center justify-between">
                     <div>
-                        <h3 class="text-xs font-bold uppercase tracking-wide text-gray-400 dark:text-gray-500">Vues
-                            Totales</h3>
-                        <p class="mt-1 text-3xl font-extrabold text-gray-800 dark:text-gray-200">54.2k</p>
+                        <p class="text-xs font-medium uppercase tracking-wide text-gray-500">
+                            Vues Totales
+                        </p>
+                        <h3 id="total-views" class="mt-2 text-3xl font-bold text-gray-900">
+                            1.5k
+                        </h3>
                     </div>
-                    <div
-                        class="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl shadow-lg shadow-emerald-500/30 text-white">
+
+                    <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-600/10 text-indigo-600">
                         <i data-lucide="eye" class="w-6 h-6"></i>
                     </div>
                 </div>
-                <div class="mt-4 flex items-center gap-x-1.5">
-                    <span
-                        class="inline-flex items-center gap-x-1 py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-800/30 dark:text-emerald-500 text-xs font-bold">
-                        <i data-lucide="trending-up" class="w-3 h-3"></i> +12%
+
+                <div class="relative mt-4 flex items-center gap-2">
+                    <span id="percentage_growth" class="text-sm font-semibold text-green-600">
+                        75%
                     </span>
                     <span class="text-xs text-gray-400">ce mois-ci</span>
                 </div>
             </div>
 
-            <!-- Utilisateurs -->
-            <div
-                class="group flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 dark:bg-slate-900 dark:border-gray-700">
-                <div class="flex justify-between items-center">
+            <!-- Card: Users -->
+            <div class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-sky-500/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+
+                <div class="relative flex items-center justify-between">
                     <div>
-                        <h3 class="text-xs font-bold uppercase tracking-wide text-gray-400 dark:text-gray-500">
-                            Utilisateurs</h3>
-                        <p class="mt-1 text-3xl font-extrabold text-gray-800 dark:text-gray-200">8</p>
+                        <p class="text-xs font-medium uppercase tracking-wide text-gray-500">
+                            Utilisateurs
+                        </p>
+                        <h3 id="total-users" class="mt-2 text-3xl font-bold text-gray-900">
+                            15
+                        </h3>
                     </div>
-                    <div
-                        class="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-400 to-fuchsia-500 rounded-2xl shadow-lg shadow-purple-500/30 text-white">
+
+                    <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-sky-600/10 text-sky-600">
                         <i data-lucide="users" class="w-6 h-6"></i>
                     </div>
                 </div>
-                <div class="mt-4 flex items-center text-sm">
-                    <span
-                        class="inline-flex items-center gap-x-1 py-0.5 px-2 rounded-full bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white text-xs font-medium">
-                        2 Admins
-                    </span>
-                    <span class="ml-2 text-xs text-gray-400">6 Auteurs</span>
+
+                <div class="relative mt-4 flex items-center gap-2">
+                    <span class="text-xs text-gray-400">Administrateurs et Auteurs</span>
                 </div>
             </div>
 
-            <!-- Commentaires -->
-            <div
-                class="group flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 dark:bg-slate-900 dark:border-gray-700">
-                <div class="flex justify-between items-center">
+            <!-- Card: Comments -->
+            <div class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+
+                <div class="relative flex items-center justify-between">
                     <div>
-                        <h3 class="text-xs font-bold uppercase tracking-wide text-gray-400 dark:text-gray-500">
-                            Commentaires</h3>
-                        <p class="mt-1 text-3xl font-extrabold text-gray-800 dark:text-gray-200">312</p>
+                        <p class="text-xs font-medium uppercase tracking-wide text-gray-500">
+                            Commentaires
+                        </p>
+                        <h3 id="total-comments" class="mt-2 text-3xl font-bold text-gray-900">
+                            120
+                        </h3>
+                        <p id="new-comments" class="mt-1 text-sm text-emerald-600">
+                            12 nouveaux
+                        </p>
                     </div>
-                    <div
-                        class="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl shadow-lg shadow-orange-500/30 text-white">
+
+                    <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-600/10 text-emerald-600">
                         <i data-lucide="message-square" class="w-6 h-6"></i>
                     </div>
                 </div>
-                <div class="mt-4 flex items-center gap-x-1.5">
-                    <span
-                        class="inline-flex items-center gap-x-1 py-0.5 px-2 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-800/30 dark:text-orange-500 text-xs font-bold">
-                        2 nouveaux
-                    </span>
-                </div>
             </div>
+
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
@@ -291,8 +248,9 @@
                                     <td class="px-4 py-3 whitespace-nowrap">
                                         <div class="flex items-center gap-x-3">
                                             <div
-                                                class="flex-shrink-0 w-10 h-10 rounded-lg bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-xl">
-                                                🚀</div>
+                                                class="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                                                <i data-lucide="file-text" class="w-5 h-5"></i>
+                                            </div>
                                             <div class="grow">
                                                 <span
                                                     class="block text-sm font-semibold text-gray-800 dark:text-gray-200">Les
@@ -313,8 +271,9 @@
                                     <td class="px-4 py-3 whitespace-nowrap">
                                         <div class="flex items-center gap-x-3">
                                             <div
-                                                class="flex-shrink-0 w-10 h-10 rounded-lg bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-xl">
-                                                🎨</div>
+                                                class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                                                <i data-lucide="image" class="w-5 h-5"></i>
+                                            </div>
                                             <div class="grow">
                                                 <span
                                                     class="block text-sm font-semibold text-gray-800 dark:text-gray-200">Intro
@@ -341,7 +300,7 @@
                 <div
                     class="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 h-full">
                     <div class="p-4 md:p-5">
-                        <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-4">Activité Récente</h3>
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-4">Votre Activité</h3>
                         <div class="flex gap-x-3 mb-4">
                             <div
                                 class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-gray-700">
@@ -351,11 +310,11 @@
                             </div>
                             <div class="grow pt-0.5 pb-8">
                                 <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white"><i
-                                        data-lucide="file-plus" class="w-4 h-4 text-blue-600 mt-1"></i> Article publié
+                                        data-lucide="edit-3" class="w-4 h-4 text-blue-600 mt-1"></i> Brouillon sauvegardé
                                 </h3>
-                                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Vous avez publié "Les bases de
-                                    PHP".</p>
-                                <span class="text-xs text-gray-500">Il y a 2 min</span>
+                                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Vous avez modifié "Les secrets de
+                                    CSS Grid".</p>
+                                <span class="text-xs text-gray-500">Il y a 15 min</span>
                             </div>
                         </div>
                         <div class="flex gap-x-3">
@@ -366,11 +325,11 @@
                             </div>
                             <div class="grow pt-0.5 pb-0">
                                 <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white"><i
-                                        data-lucide="message-circle" class="w-4 h-4 text-green-600 mt-1"></i> Nouveau
-                                    commentaire</h3>
-                                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Alice a commenté "Tuto
-                                    Laravel".</p>
-                                <span class="text-xs text-gray-500">Il y a 1 heure</span>
+                                        data-lucide="check-circle" class="w-4 h-4 text-green-600 mt-1"></i> Article validé
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Votre article "Intro à Tailwind" a
+                                    été publié par l'admin.</p>
+                                <span class="text-xs text-gray-500">Hier</span>
                             </div>
                         </div>
                     </div>

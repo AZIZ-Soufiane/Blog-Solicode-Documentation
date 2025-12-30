@@ -18,9 +18,7 @@ Ce dépôt regroupe l’ensemble des documents utilisés tout au long du dévelo
 ## 👥 Réalisé par
 - **Les apprenants de la classe :**
 - Ben yekhlef Anouar
-- El Achiri Mohamed Ayman
 - Akajou Salma
-- Akajou Yousra
 - Haddad Yasmine
 - Mallouli Abdelhay
 - Ben Taleb Mehdi
