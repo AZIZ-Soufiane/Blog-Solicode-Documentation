@@ -5,16 +5,15 @@
 
 
 ### Lab 01 – AJAX
-**Who :** Soufian
+**Who :** Soufiane Aziz
 
 ---
 ### Lab 02 – Spatie
-**Who :** Ayman
-
+**Who :** Aymane El Achiri
 ---
 
 ### Lab 03 – Laravel Lang
-**Who :** Yasmin
+**Who :** Yasmine Hadad
 
 ---
 
@@ -24,20 +23,20 @@
 ---
 
 ### Lab 05 – PHP Naming Conventions
-**Who :** Mohamed
+**Who :** Mohamed Ouallou
 
 ---
 
 ### Lab 06 – Traits in Laravel
-**Who :** Mehdi
+**Who :** Mehdi Bentaleb
 
 ---
 
 ### Lab 07 – Vite
-**Who :** Anour
+**Who :** Anouar Benyekhlef
 
 ---
 
 ### Lab 08 – Media Upload Function
-**Who :** Salma
+**Who :** Salma Akajou
 
