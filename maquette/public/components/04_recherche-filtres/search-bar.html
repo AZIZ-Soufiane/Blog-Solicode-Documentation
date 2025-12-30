@@ -18,6 +18,8 @@
             }
         }
     </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="bg-gray-100 p-10 flex justify-center items-center min-h-screen">
@@ -27,12 +29,7 @@
         <label for="search-input" class="sr-only">Rechercher</label>
         <div class="relative">
             <div class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
-                <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8" />
-                    <path d="m21 21-4.3-4.3" />
-                </svg>
+                <i data-lucide="search" class="w-5 h-5 text-gray-400"></i>
             </div>
             <input type="text" id="search-input"
                 class="py-3 px-4 ps-11 block w-full bg-white border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none shadow-sm dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
@@ -42,8 +39,7 @@
             <div class="absolute inset-y-0 end-0 flex items-center pe-4">
                 <button type="button" class="text-gray-400 hover:text-gray-600">
                     <span class="sr-only">Effacer</span>
-                    <!-- Close Icon -->
-                    <!-- <svg class="w-4 h-4" ...></svg> -->
+                    <i data-lucide="x" class="w-4 h-4"></i>
                 </button>
             </div>
         </div>
@@ -65,6 +61,9 @@
     </div>
     <!-- Search Bar Component End -->
 
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
