@@ -172,5 +172,5 @@ Ce LAB permet de comprendre :
 - Le principe de l’upload des fichiers
 - Les étapes pratiques dans Laravel
 
-
 Il constitue une base solide pour tout projet Laravel utilisant des fichiers ou des média
+
