@@ -22,13 +22,8 @@
             }
         }
     </script>
-    <!-- Google Fonts Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="bg-gray-100 p-10 flex justify-center items-center min-h-screen dark:bg-slate-900">
@@ -51,54 +46,24 @@
                             <button type="button" onclick="document.execCommand('bold', false, null)"
                                 class="p-1.5 rounded-md text-gray-500 hover:bg-gray-200 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 transition-colors"
                                 title="Gras">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M6 12h12" />
-                                    <path d="M6 20h12" />
-                                    <path d="M6 4h12" />
-                                    <path d="M6 12v8" />
-                                    <path d="M18 12v8" />
-                                    <path d="M10 4v8" />
-                                    <path d="M14 4v8" />
-                                </svg>
+                                <i data-lucide="bold" class="w-4 h-4"></i>
                             </button>
                             <button type="button" onclick="document.execCommand('italic', false, null)"
                                 class="p-1.5 rounded-md text-gray-500 hover:bg-gray-200 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 transition-colors"
                                 title="Italique">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="19" x2="10" y1="4" y2="4" />
-                                    <line x1="14" x2="5" y1="20" y2="20" />
-                                    <line x1="15" x2="9" y1="4" y2="20" />
-                                </svg>
+                                <i data-lucide="italic" class="w-4 h-4"></i>
                             </button>
                             <button type="button"
                                 onclick="const url = prompt('Entrez l\'URL:'); if(url) document.execCommand('createLink', false, url)"
                                 class="p-1.5 rounded-md text-gray-500 hover:bg-gray-200 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 transition-colors"
                                 title="Lien">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                                </svg>
+                                <i data-lucide="link" class="w-4 h-4"></i>
                             </button>
                             <div class="w-px h-5 bg-gray-300 mx-1 dark:bg-gray-600"></div>
                             <button type="button" onclick="document.execCommand('insertUnorderedList', false, null)"
                                 class="p-1.5 rounded-md text-gray-500 hover:bg-gray-200 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 transition-colors"
                                 title="Liste à puces">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="8" x2="21" y1="6" y2="6" />
-                                    <line x1="8" x2="21" y1="12" y2="12" />
-                                    <line x1="8" x2="21" y1="18" y2="18" />
-                                    <line x1="3" x2="3.01" y1="6" y2="6" />
-                                    <line x1="3" x2="3.01" y1="12" y2="12" />
-                                    <line x1="3" x2="3.01" y1="18" y2="18" />
-                                </svg>
+                                <i data-lucide="list" class="w-4 h-4"></i>
                             </button>
                         </div>
                         <!-- Content Editable Area -->
@@ -175,6 +140,9 @@
     </div>
     <!-- Comment Section Component End -->
 
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>

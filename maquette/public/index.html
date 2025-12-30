@@ -43,7 +43,7 @@
                 <!-- Logo -->
                 <a class="flex-none inline-flex items-center group" href="index.html">
                     <img src="images/solicode-logo.png" alt="SoliCode Logo"
-                        class="h-20 w-auto group-hover:scale-105 transition-transform duration-300">
+                        class="h-16 w-auto group-hover:scale-105 transition-transform duration-300">
                 </a>
 
                 <!-- Mobile Button -->
@@ -51,16 +51,8 @@
                     <button type="button" id="navbar-toggle"
                         class="p-2 inline-flex justify-center items-center gap-2 rounded-lg border border-gray-200 font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
                         aria-controls="navbar-collapse" aria-label="Toggle navigation">
-                        <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor"
-                            viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                        </svg>
-                        <svg class="hs-collapse-open:block hidden w-4 h-4" width="16" height="16" fill="currentColor"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                        </svg>
+                        <i data-lucide="menu" class="w-4 h-4"></i>
+                        <i data-lucide="x" class="hidden w-4 h-4"></i>
                     </button>
                 </div>
             </div>
@@ -73,12 +65,7 @@
                     <!-- Home Link -->
                     <a class="inline-flex items-center gap-x-2 font-medium text-blue-600 bg-blue-50 dark:bg-blue-900/20 dark:text-blue-500 py-2 px-3 rounded-lg transition-colors"
                         href="index.html">
-                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                            <polyline points="9 22 9 12 15 12 15 22" />
-                        </svg>
+                        <i data-lucide="home" class="w-4 h-4"></i>
                         Accueil
                     </a>
 
@@ -86,21 +73,10 @@
                     <div class="relative">
                         <button id="categoriesDropdownBtn" type="button"
                             class="inline-flex items-center gap-x-2 w-full sm:w-auto text-gray-600 hover:text-gray-900 font-medium py-2 px-3 rounded-lg hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800 transition-all">
-                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7" />
-                                <rect x="14" y="3" width="7" height="7" />
-                                <rect x="14" y="14" width="7" height="7" />
-                                <rect x="3" y="14" width="7" height="7" />
-                            </svg>
+                            <i data-lucide="layout-grid" class="w-4 h-4"></i>
                             Catégories
-                            <svg id="categoriesChevron" class="w-4 h-4 transition-transform duration-200"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="m6 9 6 6 6-6" />
-                            </svg>
+                            <i data-lucide="chevron-down" id="categoriesChevron"
+                                class="w-4 h-4 transition-transform duration-200"></i>
                         </button>
 
                         <div id="categoriesDropdown"
@@ -132,13 +108,8 @@
                                 class="h-9 py-2 px-4 ps-10 block w-full bg-gray-100 border-transparent rounded-xl text-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-800 dark:border-transparent dark:text-gray-300 dark:placeholder-gray-500 dark:focus:ring-blue-600 transition-all font-medium"
                                 placeholder="Rechercher...">
                             <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                                <svg class="w-3.5 h-3.5 text-gray-400 group-focus-within:text-blue-600 transition-colors"
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="11" cy="11" r="8" />
-                                    <path d="m21 21-4.3-4.3" />
-                                </svg>
+                                <i data-lucide="search"
+                                    class="w-3.5 h-3.5 text-gray-400 group-focus-within:text-blue-600 transition-colors"></i>
                             </div>
                         </form>
                     </div>
@@ -167,11 +138,7 @@
                         <div class="sm:text-center lg:text-left">
                             <div
                                 class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-5">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
+                                <i data-lucide="book-open" class="w-4 h-4"></i>
                                 <span>Formation & Développement</span>
                             </div>
                             <h1
@@ -188,11 +155,7 @@
                                 <div class="rounded-md shadow">
                                     <a href="search.html"
                                         class="w-full flex items-center justify-center px-6 py-3 border border-transparent text-sm font-semibold rounded-lg text-white bg-blue-600 hover:bg-blue-700 md:text-base transition-all shadow-lg shadow-blue-600/20 gap-2">
-                                        <svg class="w-5 h-5 animate-pulse" xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                        </svg>
+                                        <i data-lucide="search" class="w-5 h-5 animate-pulse"></i>
                                         Explorer
                                     </a>
                                 </div>
@@ -218,33 +181,32 @@
         </div>
         <!-- ========== END HERO ========== -->
 
-         <!-- Statistics Section -->
         <div class="bg-blue-900 border-t border-blue-800">
-            <div class="max-w-[85rem] mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-2 gap-4 md:grid-cols-5 text-center">
-                    <div>
-                        <p class="text-3xl font-extrabold text-white">150+</p>
-                        <p class="text-blue-200">Tutoriels</p>
-                    </div>
-                    <div>
-                        <p class="text-3xl font-extrabold text-white">50+</p>
-                        <p class="text-blue-200">Projets</p>
-                    </div>
-                    <div>
-                        <p class="text-3xl font-extrabold text-white">400+</p>
-                        <p class="text-blue-200">Étudiants</p>
-                    </div>
-                    <div>
-                        <p class="text-3xl font-extrabold text-white">98%</p>
-                        <p class="text-blue-200">Succès</p>
-                    </div>
-                    <div class="col-span-2 md:col-span-1">
-                        <p class="text-3xl font-extrabold text-white">120+</p>
-                        <p class="text-blue-200">Apprenants actifs</p>
-                    </div>
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-5 text-center">
+                <div>
+                    <p class="text-3xl font-extrabold text-white">150+</p>
+                    <p class="text-blue-200">Tutoriels</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-white">50+</p>
+                    <p class="text-blue-200">Projets</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-white">400+</p>
+                    <p class="text-blue-200">Étudiants</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-white">98%</p>
+                    <p class="text-blue-200">Succès</p>
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <p class="text-3xl font-extrabold text-white">120+</p>
+                    <p class="text-blue-200">Apprenants actifs</p>
                 </div>
             </div>
         </div>
+    </div>
 
         <!-- ========== RECENT ARTICLES ========== -->
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
@@ -419,7 +381,7 @@
         </div>
         <!-- ========== END RECENT ARTICLES ========== -->
 
-    
+
     </main>
 
     <!-- ========== FOOTER ========== -->
@@ -441,19 +403,15 @@
                     <div class="flex space-x-4">
                         <a class="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition"
                             href="#">
-                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                            </svg>
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
                         </a>
                         <a class="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition"
                             href="#">
-                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                            </svg>
+                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        </a>
+                        <a class="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition"
+                            href="#">
+                            <i data-lucide="github" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>

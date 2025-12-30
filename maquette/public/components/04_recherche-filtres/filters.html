@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoliCode Blog - Filters Component</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -18,35 +19,45 @@
             }
         }
     </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="bg-white p-10 flex justify-center dark:bg-slate-900">
 
     <!-- Filters Component Start -->
-    <div class="flex flex-wrap justify-center gap-2 mt-4">
-        <button type="button"
-            class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 focus:outline-none focus:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-blue-900 dark:text-blue-300 dark:hover:bg-blue-800">
-            Tous
+    <div class="relative">
+        <button id="categoriesDropdownBtn" type="button"
+            class="inline-flex items-center gap-x-2 w-full sm:w-auto text-gray-600 hover:text-gray-900 font-medium py-2 px-3 rounded-lg hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800 transition-all">
+            <i data-lucide="layout-grid" class="w-4 h-4"></i>
+            Catégories
+            <i data-lucide="chevron-down" id="categoriesChevron" class="w-4 h-4 transition-transform duration-200"></i>
         </button>
-        <button type="button"
-            class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-white text-gray-800 hover:bg-gray-100 shadow-sm disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-transparent dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-            Laravel
-        </button>
-        <button type="button"
-            class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-white text-gray-800 hover:bg-gray-100 shadow-sm disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-transparent dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-            PHP
-        </button>
-        <button type="button"
-            class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-white text-gray-800 hover:bg-gray-100 shadow-sm disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-transparent dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-            Android
-        </button>
-        <button type="button"
-            class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-white text-gray-800 hover:bg-gray-100 shadow-sm disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-transparent dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-            Kotlin
-        </button>
-    </div>
-    <!-- Filters Component End -->
 
+        <div id="categoriesDropdown"
+            class="hidden absolute top-full left-0 sm:left-auto sm:right-0 mt-2 w-48 bg-white sm:shadow-xl rounded-lg p-2 dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+            style="z-index: 9999;">
+            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors"
+                href="search.html?category=laravel">
+                <i data-lucide="layers" class="w-4 h-4 text-blue-600"></i>
+                Laravel
+            </a>
+            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors"
+                href="search.html?category=php">
+                <i data-lucide="code" class="w-4 h-4 text-purple-600"></i>
+                PHP
+            </a>
+            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors"
+                href="search.html?category=mobile">
+                <i data-lucide="smartphone" class="w-4 h-4 text-pink-600"></i>
+                Mobile
+            </a>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
